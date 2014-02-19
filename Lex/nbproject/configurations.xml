@@ -21,6 +21,10 @@
       <itemPath>comment</itemPath>
       <itemPath>comment_output</itemPath>
       <itemPath>invalid_comment</itemPath>
+      <itemPath>parse_wiki1_in</itemPath>
+      <itemPath>parse_wiki1_out</itemPath>
+      <itemPath>parse_wiki2_in</itemPath>
+      <itemPath>parse_wiki2_out</itemPath>
       <itemPath>quotes_multiline</itemPath>
       <itemPath>quotes_multiline_output</itemPath>
       <itemPath>single_line</itemPath>
@@ -135,6 +139,14 @@
       </folder>
       <item path="invalid_comment" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="parse_wiki1_in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parse_wiki1_out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parse_wiki2_in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parse_wiki2_out" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="quotes_multiline" ex="false" tool="3" flavor2="0">
       </item>
       <item path="quotes_multiline_output" ex="false" tool="3" flavor2="0">
@@ -240,6 +252,14 @@
         </linkerTool>
       </folder>
       <item path="invalid_comment" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parse_wiki1_in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parse_wiki1_out" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parse_wiki2_in" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="parse_wiki2_out" ex="false" tool="3" flavor2="0">
       </item>
       <item path="quotes_multiline" ex="false" tool="3" flavor2="0">
       </item>
