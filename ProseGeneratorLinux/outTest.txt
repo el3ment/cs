@@ -1,0 +1,685 @@
+{
+<Cap-adjective>
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Large ;
+Terrible ;
+Mean ;
+Secret ;
+Grouchy ;
+Introverted ;
+Sleepy ;
+Threatening ;
+Ferocious ;
+Jungle ;
+Swampy ;
+Sexist ;
+Military ;
+Capitalist ;
+Socialist ;
+Hungry ;
+Cranky ;
+Communist ;
+Soviet ;
+Chinese ;
+Syrian ;
+Libyan ;
+Terrorist ;
+Sudanese ;
+Egyptian ;
+Iraqi ;
+Iranian ;
+Pakistani ;
+Cambodian ;
+North Korean ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Doomsday ;
+Large ;
+Terrible ;
+Mean ;
+Secret ;
+Grouchy ;
+Introverted ;
+Sleepy ;
+Threatening ;
+Ferocious ;
+Jungle ;
+Swampy ;
+Sexist ;
+Military ;
+Capitalist ;
+Socialist ;
+Hungry ;
+Cranky ;
+Communist ;
+Soviet ;
+Chinese ;
+Syrian ;
+Libyan ;
+Terrorist ;
+Sudanese ;
+Egyptian ;
+Iraqi ;
+Iranian ;
+Pakistani ;
+Cambodian ;
+North Korean ;
+}
+{
+<Cap-identifier>
+<Cap-noun> ;
+<Cap-noun> s ;
+<Cap-noun> ;
+<Cap-noun> s ;
+}
+{
+<Cap-noun>
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Missile ;
+Banana ;
+Mixed Fruit Bowl ;
+Piranha ;
+Dune-Buggy Race ;
+Problem ;
+Differential Equation ;
+Laplace Transform ;
+Fourier Transform ;
+Chemical ;
+Improper Integral ;
+Opus ;
+Penguin ;
+President ;
+Dictator ;
+Scientist ;
+Painter ;
+Inventor ;
+Spy ;
+Ethnic Person ;
+Person ;
+Formula ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Device ;
+Missile ;
+Banana ;
+Mixed Fruit Bowl ;
+Piranha ;
+Dune-Buggy Race ;
+Problem ;
+Differential Equation ;
+Laplace Transform ;
+Fourier Transform ;
+Chemical ;
+Improper Integral ;
+Opus ;
+Penguin ;
+President ;
+Dictator ;
+Scientist ;
+Painter ;
+Inventor ;
+Spy ;
+Ethnic Person ;
+Person ;
+Formula ;
+}
+{
+<Jamie-does-something-normal>
+Jamie <banal-motion-verb> to her <banal-place> so she can have some <banal-adjective> <food> . ;
+Jamie has a romantic dinner with a <adjective> man. ;
+Jamie relaxes in her <banal-place> with some <banal-noun> . ;
+Jamie <banal-motion-verb> with an attractive fellow on the beach. ;
+Jamie relaxes in front of a warm, <color> fire with a <banal-adjective> book and some <banal-noun> . ;
+Jamie <banal-motion-verb> to her <banal-place> so she can have some <banal-adjective> <food> . ;
+Jamie has a romantic dinner with a <adjective> man. ;
+Jamie relaxes in her <banal-place> with some <banal-noun> . ;
+Jamie <banal-motion-verb> with an attractive fellow on the beach. ;
+Jamie relaxes in front of a warm, <color> fire with a <banal-adjective> book and some <banal-noun> . ;
+}
+{
+<Jamie-gets-in-terrible-bind>
+she is drugged by the <adjective> <evil-doers> and chained to a <adjective> <color> <noun> . ;
+she falls off of a cliff and nearly drowns. ;
+the <evil-doers> <attack-verb> Max, and as she <banal-motion-verb> to save him, falls into a tiger trap. ;
+Jamie falls into a trap set by the <evil-doers> . ;
+she is drugged by the <adjective> <evil-doers> and chained to a <adjective> <color> <noun> . ;
+she falls off of a cliff and nearly drowns. ;
+the <evil-doers> <attack-verb> Max, and as she <banal-motion-verb> to save him, falls into a tiger trap. ;
+Jamie falls into a trap set by the <evil-doers> . ;
+}
+{
+<Jamie-gets-mission>
+Oscar Goldman finds her at her <banal-place> and tells her about the <adjective> <noun> 's <evil-scheme> . If she fails, <something-bad> . She must go to <exotic-location> and <attack-verb> the <adjective> <evil-doers> . ;
+Max the Bionic Dog <banal-motion-verb> to <exotic-location> and discovers the <evil-doers> 's <evil-scheme> . Max <banal-motion-verb> back to Jamie in her <banal-place> so that she can rescue the <good-people> from the <evil-doers> . ;
+Jamie's foster mother is taken hostage by the <evil-doers> in <exotic-location> . Jamie hears her cries with her bionic hearing and <banal-motion-verb> to <attack-verb> the <evil-doers> . ;
+Oscar Goldman finds her at her <banal-place> and tells her about the <adjective> <noun> 's <evil-scheme> . If she fails, <something-bad> . She must go to <exotic-location> and <attack-verb> the <adjective> <evil-doers> . ;
+Max the Bionic Dog <banal-motion-verb> to <exotic-location> and discovers the <evil-doers> 's <evil-scheme> . Max <banal-motion-verb> back to Jamie in her <banal-place> so that she can rescue the <good-people> from the <evil-doers> . ;
+Jamie's foster mother is taken hostage by the <evil-doers> in <exotic-location> . Jamie hears her cries with her bionic hearing and <banal-motion-verb> to <attack-verb> the <evil-doers> . ;
+}
+{
+<Jamie-saves-the-day>
+Jamie overcomes the <evil-doers> with her <bionic-part> and rescues the <good-people> . ;
+Max <banal-motion-verb> to <attack-verb> the <evil-doers> and rescue Jamie from them. ;
+Oscar sends the $6 million man to <attack-verb> the <adjective> <evil-doers> and save Jamie. ;
+Jamie turns on the sprinkler system by using her <bionic-part> and the Fembots short-circuit. With Max's help she rounds up the remaining <evil-doers> . ;
+Jamie overcomes the <evil-doers> with her <bionic-part> and rescues the <good-people> . ;
+Max <banal-motion-verb> to <attack-verb> the <evil-doers> and rescue Jamie from them. ;
+Oscar sends the $6 million man to <attack-verb> the <adjective> <evil-doers> and save Jamie. ;
+Jamie turns on the sprinkler system by using her <bionic-part> and the Fembots short-circuit. With Max's help she rounds up the remaining <evil-doers> . ;
+}
+{
+<Mission-interruption>
+But, before she can do so, ;
+Suddenly, ;
+Without warning, ;
+But alas, ;
+But on her way from <exotic-location> , ;
+But, before she can do so, ;
+Suddenly, ;
+Without warning, ;
+But alas, ;
+But on her way from <exotic-location> , ;
+}
+{
+<adjective>
+doomsday ;
+large ;
+terrible ;
+mean ;
+green ;
+secret ;
+grouchy ;
+sleepy ;
+threatening ;
+ferocious ;
+swampy ;
+sexist ;
+military ;
+capitalist ;
+socialist ;
+hungry ;
+cranky ;
+communist ;
+Soviet ;
+Chinese ;
+Syrian ;
+Libyan ;
+terrorist ;
+Sudanese ;
+Egyptian ;
+Iraqi ;
+Iranian ;
+Pakistani ;
+Cambodian ;
+North Korean ;
+doomsday ;
+large ;
+terrible ;
+mean ;
+green ;
+secret ;
+grouchy ;
+sleepy ;
+threatening ;
+ferocious ;
+swampy ;
+sexist ;
+military ;
+capitalist ;
+socialist ;
+hungry ;
+cranky ;
+communist ;
+Soviet ;
+Chinese ;
+Syrian ;
+Libyan ;
+terrorist ;
+Sudanese ;
+Egyptian ;
+Iraqi ;
+Iranian ;
+Pakistani ;
+Cambodian ;
+North Korean ;
+}
+{
+<attack-verb>
+disembowel ;
+dismember ;
+decapitate ;
+incapacitate ;
+hurl the <adjective> <identifier> at ;
+throw ;
+K.O. ;
+disembowel ;
+dismember ;
+decapitate ;
+incapacitate ;
+hurl the <adjective> <identifier> at ;
+throw ;
+K.O. ;
+}
+{
+<banal-adjective>
+happy ;
+silly ;
+common ;
+lowly ;
+normal ;
+every-day ;
+commonplace ;
+household ;
+small ;
+large ;
+medium-sized ;
+average ;
+hopeless ;
+friendly ;
+bright ;
+<color> ;
+happy ;
+silly ;
+common ;
+lowly ;
+normal ;
+every-day ;
+commonplace ;
+household ;
+small ;
+large ;
+medium-sized ;
+average ;
+hopeless ;
+friendly ;
+bright ;
+<color> ;
+}
+{
+<banal-motion-verb>
+walks ;
+runs ;
+jogs ;
+drives her car ;
+runs really fast ;
+walks ;
+runs ;
+jogs ;
+drives her car ;
+runs really fast ;
+}
+{
+<banal-noun>
+boxes ;
+bananas ;
+chalkboards ;
+dogs ;
+dog-food ;
+cat-food ;
+<food> ;
+televisions ;
+chairs ;
+tables ;
+contact lenses ;
+boxes ;
+bananas ;
+chalkboards ;
+dogs ;
+dog-food ;
+cat-food ;
+<food> ;
+televisions ;
+chairs ;
+tables ;
+contact lenses ;
+}
+{
+<banal-place>
+Ojai classroom ;
+house in Ojai ;
+apartment ;
+condo ;
+ski resort ;
+Ojai classroom ;
+house in Ojai ;
+apartment ;
+condo ;
+ski resort ;
+}
+{
+<bionic-part>
+bionic leg ;
+bionic arm ;
+super-human strength ;
+super-human speed ;
+bionic ear ;
+bionic toes ;
+bionic leg ;
+bionic arm ;
+super-human strength ;
+super-human speed ;
+bionic ear ;
+bionic toes ;
+}
+{
+<color>
+yellow ;
+green ;
+blue ;
+purple ;
+red ;
+orange ;
+black ;
+white ;
+gray ;
+yellow ;
+green ;
+blue ;
+purple ;
+red ;
+orange ;
+black ;
+white ;
+gray ;
+}
+{
+<evil-doers>
+<identifier> ;
+NRA supporters ;
+cattle ranchers ;
+Pepsi-Co execs ;
+drunken Exxon tanker captains ;
+gangsters ;
+Christian fundamentalists ;
+gangsters ;
+Russian mobsters ;
+Sicilian mobsters ;
+Colombian drug-lords ;
+<identifier> ;
+NRA supporters ;
+cattle ranchers ;
+Pepsi-Co execs ;
+drunken Exxon tanker captains ;
+gangsters ;
+Christian fundamentalists ;
+gangsters ;
+Russian mobsters ;
+Sicilian mobsters ;
+Colombian drug-lords ;
+}
+{
+<evil-scheme>
+plans to detonate the <adjective> <identifier> over <exotic-location> ;
+plot to assassinate the <Cap-adjective> <Cap-identifier> of <exotic-location> ;
+<Cap-adjective> <Cap-identifier> ;
+plans to detonate the <adjective> <identifier> over <exotic-location> ;
+plot to assassinate the <Cap-adjective> <Cap-identifier> of <exotic-location> ;
+<Cap-adjective> <Cap-identifier> ;
+}
+{
+<exotic-location>
+an octopus's garden beneath the waves ;
+a small Mediterranean kingdom ;
+a beauty pageant ;
+Paris ;
+Washington, D.C. ;
+Lebanon ;
+Syria ;
+Sudan ;
+Vietnam ;
+Croatia ;
+Canada ;
+North Korea ;
+Palo Alto ;
+Tresidder Express ;
+Hawaii ;
+a Siberian <noun> silo ;
+the Kremlin ;
+a Swiss chocolate factory ;
+Catalina Island ;
+the Mojave desert ;
+an octopus's garden beneath the waves ;
+a small Mediterranean kingdom ;
+a beauty pageant ;
+Paris ;
+Washington, D.C. ;
+Lebanon ;
+Syria ;
+Sudan ;
+Vietnam ;
+Croatia ;
+Canada ;
+North Korea ;
+Palo Alto ;
+Tresidder Express ;
+Hawaii ;
+a Siberian <noun> silo ;
+the Kremlin ;
+a Swiss chocolate factory ;
+Catalina Island ;
+the Mojave desert ;
+}
+{
+<food>
+tuna ;
+spaghetti ;
+hamburgers ;
+oranges ;
+cheese ;
+okra ;
+gumbo ;
+rice-a-roni ;
+steak ;
+pork chops ;
+potatoes ;
+curry ;
+samosas ;
+tuna ;
+spaghetti ;
+hamburgers ;
+oranges ;
+cheese ;
+okra ;
+gumbo ;
+rice-a-roni ;
+steak ;
+pork chops ;
+potatoes ;
+curry ;
+samosas ;
+}
+{
+<golly-gee>
+But happily, ;
+Astonishingly, ;
+To our surprise, ;
+Incredibly, ;
+But since our heroine is trained to deal with such trauma, ;
+But since we're on a low budget, ;
+But happily, ;
+Astonishingly, ;
+To our surprise, ;
+Incredibly, ;
+But since our heroine is trained to deal with such trauma, ;
+But since we're on a low budget, ;
+}
+{
+<good-people>
+puppies ;
+cows ;
+well-behaved children ;
+elves ;
+kittens ;
+spotted owls ;
+homeless people ;
+whales ;
+puppies ;
+cows ;
+well-behaved children ;
+elves ;
+kittens ;
+spotted owls ;
+homeless people ;
+whales ;
+}
+{
+<identifier>
+<noun> ;
+<noun> s ;
+<noun> ;
+<noun> s ;
+}
+{
+<noun>
+device ;
+device ;
+missile ;
+banana ;
+mixed fruit bowl ;
+piranha ;
+dune-buggy race ;
+problem ;
+differential equation ;
+Laplace Transform ;
+Fourier Transform ;
+chemical ;
+improper integral ;
+opus ;
+penguin ;
+president ;
+dictator ;
+scientist ;
+painter ;
+inventor ;
+spy ;
+ethnic person ;
+person ;
+device ;
+device ;
+missile ;
+banana ;
+mixed fruit bowl ;
+piranha ;
+dune-buggy race ;
+problem ;
+differential equation ;
+Laplace Transform ;
+Fourier Transform ;
+chemical ;
+improper integral ;
+opus ;
+penguin ;
+president ;
+dictator ;
+scientist ;
+painter ;
+inventor ;
+spy ;
+ethnic person ;
+person ;
+}
+{
+<something-bad>
+the world will end ;
+Andy Griffith will retire ;
+<good-people> will fall victim to the <Cap-adjective> <Cap-identifier> ;
+the elderly will lobby for more entitlements ;
+Pete Wilson will <attack-verb> the <good-people> ;
+Jamie will lose her good looks ;
+Jamie will get a <color> pimple ;
+our <food> will be contaminated ;
+the world will end ;
+Andy Griffith will retire ;
+<good-people> will fall victim to the <Cap-adjective> <Cap-identifier> ;
+the elderly will lobby for more entitlements ;
+Pete Wilson will <attack-verb> the <good-people> ;
+Jamie will lose her good looks ;
+Jamie will get a <color> pimple ;
+our <food> will be contaminated ;
+}
+{
+<start>
+<title> . <Jamie-does-something-normal> <Jamie-gets-mission> <Mission-interruption> <Jamie-gets-in-terrible-bind> <golly-gee> <Jamie-saves-the-day> <transition> <Jamie-does-something-normal> ;
+}Fri, 26 Apr 1996 01:21:21 -0700 (PDT) Date: Fri, 26 Apr 1996 01:21:25 -0700 (PDT) From: Vidya Sundaram <vidsquid@leland.Stanford.EDU> Sender: vidsquid@leland.Stanford.EDU To: Julie Zelenski <zelenski@leland.Stanford.EDU> Subject: funny grammar file Dear Julie, We hope you enjoy this as much as we do. Thanks, Vidya Sundaram and Alan Post bionic.g This was written by Alan Post and Vidya Sundaram, because we think Jamie Sommers is the coolest thing since spam. If you have never seen The Bionic Woman, you are a loser. <title> . <Jamie-does-something-normal> <Jamie-gets-mission> <Mission-interruption> <Jamie-gets-in-terrible-bind> <golly-gee> <Jamie-saves-the-day> <transition> <Jamie-does-something-normal> ;
+}
+{
+<title>
+The <Cap-adjective> <Cap-identifier> ;
+The <Cap-adjective> <Cap-identifier> ;
+The <Cap-identifier> and the <Cap-adjective> <Cap-identifier> ;
+The Trouble With the <Cap-identifier> ;
+The <Cap-adjective> <Cap-identifier> ;
+The <Cap-adjective> <Cap-identifier> ;
+The <Cap-identifier> and the <Cap-adjective> <Cap-identifier> ;
+The Trouble With the <Cap-identifier> ;
+}
+{
+<transition>
+The excitement over for now, ;
+Tired after a whole episode, ;
+Thinking that she should be paid more, ;
+Overworked and feeling terrible, ;
+Wishing she was taking CS 235 instead of saving the world from <evil-doers> , ;
+After experimenting with nanobots in <exotic-location> , ;
+The excitement over for now, ;
+Tired after a whole episode, ;
+Thinking that she should be paid more, ;
+Overworked and feeling terrible, ;
+Wishing she was taking CS 235 instead of saving the world from <evil-doers> , ;
+After experimenting with nanobots in <exotic-location> , ;
+}
+
+}Fri, 26 Apr 1996 01:21:21 -0700 (PDT) Date: Fri, 26 Apr 1996 01:21:25 -0700 (PDT) From: Vidya Sundaram <vidsquid@leland.Stanford.EDU> Sender: vidsquid@leland.Stanford.EDU To: Julie Zelenski <zelenski@leland.Stanford.EDU> Subject: funny grammar file Dear Julie, We hope you enjoy this as much as we do. Thanks, Vidya Sundaram and Alan Post bionic.g This was written by Alan Post and Vidya Sundaram, because we think Jamie Sommers is the coolest thing since spam. If you have never seen The Bionic Woman, you are a loser. The Device s and the Communist Device s . Jamie relaxes in her ski resort with some bananas . Jamie's foster mother is taken hostage by the gangsters in Canada . Jamie hears her cries with her bionic hearing and runs really fast to K.O. the drunken Exxon tanker captains . But, before she can do so, the cattle ranchers decapitate Max, and as she runs to save him, falls into a tiger trap. To our surprise, Jamie turns on the sprinkler system by using her super-human speed and the Fembots short-circuit. With Max's help she rounds up the remaining drunken Exxon tanker captains . Thinking that she should be paid more, Jamie relaxes in her condo with some dogs . 
+
+}Fri, 26 Apr 1996 01:21:21 -0700 (PDT) Date: Fri, 26 Apr 1996 01:21:25 -0700 (PDT) From: Vidya Sundaram <vidsquid@leland.Stanford.EDU> Sender: vidsquid@leland.Stanford.EDU To: Julie Zelenski <zelenski@leland.Stanford.EDU> Subject: funny grammar file Dear Julie, We hope you enjoy this as much as we do. Thanks, Vidya Sundaram and Alan Post bionic.g This was written by Alan Post and Vidya Sundaram, because we think Jamie Sommers is the coolest thing since spam. If you have never seen The Bionic Woman, you are a loser. The Doomsday Dune-Buggy Race . Jamie relaxes in front of a warm, purple fire with a silly book and some chairs . Max the Bionic Dog jogs to Croatia and discovers the Colombian drug-lords 's plans to detonate the North Korean device over Catalina Island . Max runs really fast back to Jamie in her Ojai classroom so that she can rescue the well-behaved children from the Russian mobsters . Suddenly, Jamie falls into a trap set by the cattle ranchers . To our surprise, Max jogs to hurl the cranky problem s at the drunken Exxon tanker captains and rescue Jamie from them. Thinking that she should be paid more, Jamie relaxes in her house in Ojai with some tables . 
+
+The Chinese Chemical s . Jamie jogs to her Ojai classroom so she can have some bright okra . Jamie's foster mother is taken hostage by the cattle ranchers in Paris . Jamie hears her cries with her bionic hearing and walks to disembowel the NRA supporters . Suddenly, the Pepsi-Co execs hurl the mean Fourier Transform s at Max, and as she runs really fast to save him, falls into a tiger trap. But happily, Jamie overcomes the Sicilian mobsters with her bionic leg and rescues the elves . Wishing she was taking CS 235 instead of saving the world from gangsters , Jamie has a romantic dinner with a Egyptian man. 
+
+}Fri, 26 Apr 1996 01:21:21 -0700 (PDT) Date: Fri, 26 Apr 1996 01:21:25 -0700 (PDT) From: Vidya Sundaram <vidsquid@leland.Stanford.EDU> Sender: vidsquid@leland.Stanford.EDU To: Julie Zelenski <zelenski@leland.Stanford.EDU> Subject: funny grammar file Dear Julie, We hope you enjoy this as much as we do. Thanks, Vidya Sundaram and Alan Post bionic.g This was written by Alan Post and Vidya Sundaram, because we think Jamie Sommers is the coolest thing since spam. If you have never seen The Bionic Woman, you are a loser. The Trouble With the Improper Integral . Jamie jogs with an attractive fellow on the beach. Oscar Goldman finds her at her apartment and tells her about the terrible painter 's plans to detonate the terrorist missile over an octopus's garden beneath the waves . If she fails, Jamie will get a green pimple . She must go to Lebanon and K.O. the green Sicilian mobsters . But, before she can do so, she falls off of a cliff and nearly drowns. Incredibly, Max jogs to hurl the Libyan piranha s at the Russian mobsters and rescue Jamie from them. Overworked and feeling terrible, Jamie has a romantic dinner with a communist man. 
+
+}Fri, 26 Apr 1996 01:21:21 -0700 (PDT) Date: Fri, 26 Apr 1996 01:21:25 -0700 (PDT) From: Vidya Sundaram <vidsquid@leland.Stanford.EDU> Sender: vidsquid@leland.Stanford.EDU To: Julie Zelenski <zelenski@leland.Stanford.EDU> Subject: funny grammar file Dear Julie, We hope you enjoy this as much as we do. Thanks, Vidya Sundaram and Alan Post bionic.g This was written by Alan Post and Vidya Sundaram, because we think Jamie Sommers is the coolest thing since spam. If you have never seen The Bionic Woman, you are a loser. The Opus s and the Communist Chemical s . Jamie runs with an attractive fellow on the beach. Jamie's foster mother is taken hostage by the Sicilian mobsters in Paris . Jamie hears her cries with her bionic hearing and runs really fast to incapacitate the gangsters . But alas, Jamie falls into a trap set by the cattle ranchers . Incredibly, Jamie overcomes the drunken Exxon tanker captains with her super-human strength and rescues the spotted owls . Thinking that she should be paid more, Jamie has a romantic dinner with a large man. 
+
+}Fri, 26 Apr 1996 01:21:21 -0700 (PDT) Date: Fri, 26 Apr 1996 01:21:25 -0700 (PDT) From: Vidya Sundaram <vidsquid@leland.Stanford.EDU> Sender: vidsquid@leland.Stanford.EDU To: Julie Zelenski <zelenski@leland.Stanford.EDU> Subject: funny grammar file Dear Julie, We hope you enjoy this as much as we do. Thanks, Vidya Sundaram and Alan Post bionic.g This was written by Alan Post and Vidya Sundaram, because we think Jamie Sommers is the coolest thing since spam. If you have never seen The Bionic Woman, you are a loser. The Trouble With the Piranha . Jamie runs with an attractive fellow on the beach. Jamie's foster mother is taken hostage by the Pepsi-Co execs in an octopus's garden beneath the waves . Jamie hears her cries with her bionic hearing and runs really fast to decapitate the gangsters . But on her way from Sudan , she is drugged by the mean drunken Exxon tanker captains and chained to a communist red scientist . But since our heroine is trained to deal with such trauma, Jamie overcomes the Sicilian mobsters with her bionic toes and rescues the kittens . After experimenting with nanobots in Sudan , Jamie relaxes in front of a warm, white fire with a medium-sized book and some dog-food . 
+
+}Fri, 26 Apr 1996 01:21:21 -0700 (PDT) Date: Fri, 26 Apr 1996 01:21:25 -0700 (PDT) From: Vidya Sundaram <vidsquid@leland.Stanford.EDU> Sender: vidsquid@leland.Stanford.EDU To: Julie Zelenski <zelenski@leland.Stanford.EDU> Subject: funny grammar file Dear Julie, We hope you enjoy this as much as we do. Thanks, Vidya Sundaram and Alan Post bionic.g This was written by Alan Post and Vidya Sundaram, because we think Jamie Sommers is the coolest thing since spam. If you have never seen The Bionic Woman, you are a loser. The Secret Device s . Jamie drives her car with an attractive fellow on the beach. Oscar Goldman finds her at her condo and tells her about the ferocious Fourier Transform 's plot to assassinate the Capitalist Chemical s of Catalina Island . If she fails, Jamie will get a white pimple . She must go to Washington, D.C. and decapitate the Soviet dune-buggy race s . Without warning, she is drugged by the socialist Colombian drug-lords and chained to a doomsday blue device . But since we're on a low budget, Jamie overcomes the Sicilian mobsters with her bionic ear and rescues the homeless people . After experimenting with nanobots in the Mojave desert , Jamie relaxes in front of a warm, white fire with a every-day book and some chairs . 
+
+The Threatening Device s . Jamie relaxes in front of a warm, blue fire with a lowly book and some dogs . Oscar Goldman finds her at her ski resort and tells her about the mean opus 's Cambodian Banana . If she fails, spotted owls will fall victim to the Doomsday Device s . She must go to Catalina Island and disembowel the doomsday Sicilian mobsters . But on her way from Syria , the cattle ranchers throw Max, and as she runs to save him, falls into a tiger trap. But happily, Oscar sends the $6 million man to disembowel the Pakistani drunken Exxon tanker captains and save Jamie. Thinking that she should be paid more, Jamie runs to her apartment so she can have some average tuna . 
+
+The Communist Device s . Jamie has a romantic dinner with a swampy man. Max the Bionic Dog runs really fast to an octopus's garden beneath the waves and discovers the drunken Exxon tanker captains 's plot to assassinate the Doomsday Device s of the Mojave desert . Max drives her car back to Jamie in her condo so that she can rescue the kittens from the drunken Exxon tanker captains . But, before she can do so, the Christian fundamentalists decapitate Max, and as she walks to save him, falls into a tiger trap. But since our heroine is trained to deal with such trauma, Jamie overcomes the gangsters with her bionic leg and rescues the puppies . Tired after a whole episode, Jamie runs to her ski resort so she can have some common gumbo . 
+
+The Grouchy Penguin s . Jamie has a romantic dinner with a Syrian man. Oscar Goldman finds her at her apartment and tells her about the grouchy problem 's plot to assassinate the Doomsday Differential Equation s of the Mojave desert . If she fails, our cheese will be contaminated . She must go to Washington, D.C. and decapitate the large cattle ranchers . Without warning, she falls off of a cliff and nearly drowns. But happily, Jamie turns on the sprinkler system by using her super-human strength and the Fembots short-circuit. With Max's help she rounds up the remaining Colombian drug-lords . Wishing she was taking CS 235 instead of saving the world from Russian mobsters , Jamie relaxes in front of a warm, red fire with a every-day book and some dogs . 
+

@@ -1,0 +1,19 @@
+add james
+print
+hash 0: james 
+add john
+add jim
+add j
+add robert
+add rob
+add r
+find rob true
+find james true
+print
+hash 0: 
+hash 1: j robert rob 
+hash 2: r 
+hash 3: 
+hash 4: james 
+hash 5: 
+hash 6: john jim 

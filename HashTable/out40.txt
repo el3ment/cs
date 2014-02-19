@@ -1,0 +1,12 @@
+add a
+add b
+add c
+print
+hash 0: c 
+hash 1: a 
+hash 2: b 
+add c
+print
+hash 0: c 
+hash 1: a 
+hash 2: b 

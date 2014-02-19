@@ -1,0 +1,18 @@
+add james
+add robert
+add robert
+add robert
+add robert
+add robert
+print
+remove robert
+remove james
+print
+clear
+print
+clear
+add james
+print
+remove james
+add james
+print

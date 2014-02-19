@@ -1,0 +1,5 @@
+list 2
+insert 0 hey
+insert 0 hey2
+list 2
+print

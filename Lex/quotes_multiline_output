@@ -1,0 +1,9 @@
+(COMMA,",",1)
+(COLON_DASH,":-",1)
+(COLON_DASH,":-",1)
+(STRING,"'strings don''t mind apostrophes'",1)
+(COMMA,",",1)
+(STRING,"'multi
+line string'",1)
+(EOF,"",2)
+Total Tokens = 7

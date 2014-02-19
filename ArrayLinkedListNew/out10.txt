@@ -1,0 +1,10 @@
+list 4
+insert 0 bob
+insert 1 joe
+insert 2 jim
+insert 3 james
+insert 4 john
+insert 5 robert
+print
+node 0: bob joe 
+node 1: jim james john robert 

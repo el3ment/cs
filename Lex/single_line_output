@@ -1,0 +1,6 @@
+(COMMA,",",1)
+(STRING,"'string'",1)
+(PERIOD,".",1)
+(COLON_DASH,":-",1)
+(EOF,"",1)
+Total Tokens = 5

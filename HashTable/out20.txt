@@ -1,0 +1,23 @@
+add james
+add robert
+add robert
+add robert
+add robert
+add robert
+print
+hash 0: james robert 
+hash 1: 
+hash 2: 
+remove robert
+remove james
+print
+clear
+print
+clear
+add james
+print
+hash 0: james 
+remove james
+add james
+print
+hash 0: james 

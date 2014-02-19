@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="88">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Input.h</itemPath>
+      <itemPath>Lex.h</itemPath>
+      <itemPath>State.h</itemPath>
+      <itemPath>Token.h</itemPath>
+      <itemPath>TokenType.h</itemPath>
+      <itemPath>Utils.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>active</itemPath>
+      <itemPath>blank</itemPath>
+      <itemPath>blank_output</itemPath>
+      <itemPath>comment</itemPath>
+      <itemPath>comment_output</itemPath>
+      <itemPath>invalid_comment</itemPath>
+      <itemPath>quotes_multiline</itemPath>
+      <itemPath>quotes_multiline_output</itemPath>
+      <itemPath>single_line</itemPath>
+      <itemPath>single_line_output</itemPath>
+      <itemPath>single_token</itemPath>
+      <itemPath>single_token_output</itemPath>
+      <itemPath>wiki1</itemPath>
+      <itemPath>wiki1_output</itemPath>
+      <itemPath>wiki2</itemPath>
+      <itemPath>wiki2_output</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Input.cpp</itemPath>
+      <itemPath>Lex.cpp</itemPath>
+      <itemPath>State.cpp</itemPath>
+      <itemPath>Token.cpp</itemPath>
+      <itemPath>TokenType.cpp</itemPath>
+      <itemPath>Utils.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f2" displayName="Battery" projectFiles="true" kind="TEST">
+        <itemPath>tests/newsimpletest.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </compileType>
+      <item path="Input.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Input.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Lex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="State.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="State.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Token.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Token.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TokenType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TokenType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="active" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="blank" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="blank_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comment" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comment_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <item path="invalid_comment" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quotes_multiline" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quotes_multiline_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_line" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_line_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_token" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_token_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/newsimpletest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="wiki1" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wiki1_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wiki2" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wiki2_output" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </compileType>
+      <item path="Input.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Input.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Lex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Lex.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="State.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="State.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Token.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Token.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TokenType.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="TokenType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="active" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="blank" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="blank_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comment" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="comment_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+        </linkerTool>
+      </folder>
+      <item path="invalid_comment" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quotes_multiline" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="quotes_multiline_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_line" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_line_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_token" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="single_token_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/newsimpletest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="wiki1" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wiki1_output" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wiki2" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wiki2_output" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

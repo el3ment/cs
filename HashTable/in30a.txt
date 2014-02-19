@@ -1,0 +1,11 @@
+add james
+print
+add john
+add jim
+add j
+add robert
+add rob
+add r
+find rob
+find james
+print

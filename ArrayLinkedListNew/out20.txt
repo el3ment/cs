@@ -1,0 +1,9 @@
+list 2
+insert 0 bob
+insert 1 joe
+insert 2 jim
+remove 2 jim
+insert 1 james
+print
+node 0: bob 
+node 1: james joe 

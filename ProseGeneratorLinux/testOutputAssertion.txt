@@ -1,0 +1,43 @@
+{
+<adverb>
+warily ;
+grumpily ;
+}
+{
+<object>
+waves ;
+;
+big yellow flowers ;
+slugs ;
+}
+{
+<start>
+The <object> <verb> tonight. ;
+}
+{
+<verb>
+sigh <adverb> ;
+portend like <object> ;
+die <adverb> ;
+}
+
+The big yellow flowers sigh grumpily tonight. 
+
+The slugs portend like waves tonight. 
+
+The die grumpily tonight. 
+
+The slugs die warily tonight. 
+
+The big yellow flowers portend like waves tonight. 
+
+The waves sigh grumpily tonight. 
+
+The big yellow flowers die grumpily tonight. 
+
+The slugs die warily tonight. 
+
+The big yellow flowers die grumpily tonight. 
+
+The waves portend like big yellow flowers tonight. 
+

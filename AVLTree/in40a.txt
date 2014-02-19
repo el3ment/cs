@@ -1,0 +1,21 @@
+add 5
+add 3
+add 7
+remove 5
+print
+clear
+add 6
+add 2
+add 9
+add 1
+add 4
+add 8
+add B
+add 3
+add 5
+add 7
+add A
+add C
+add D
+remove 1
+print

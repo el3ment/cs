@@ -1,0 +1,51 @@
+add 20
+add 4
+add 15
+print
+clear
+add 20
+add 4
+add 26
+add 3
+add 9
+add 15
+print
+clear
+add 20
+add 4
+add 26
+add 3
+add 9
+add 21
+add 30
+add 2
+add 7
+add 11
+add 15
+print
+clear
+add 20
+add 4
+add 8
+print
+clear
+add 20
+add 4
+add 26
+add 3
+add 9
+add 8
+print
+clear
+add 20
+add 4
+add 26
+add 3
+add 9
+add 21
+add 30
+add 2
+add 7
+add 11
+add 8
+print

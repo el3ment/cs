@@ -1,0 +1,9 @@
+list 2
+insert 0 a
+insert 1 b
+insert 2 c
+remove 2
+remove 1
+print
+insert 1 b
+print

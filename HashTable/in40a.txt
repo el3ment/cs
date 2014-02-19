@@ -1,0 +1,6 @@
+add a
+add b
+add c
+print
+add c
+print
