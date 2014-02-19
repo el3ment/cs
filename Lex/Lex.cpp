@@ -9,13 +9,12 @@
 using namespace std;
 
 Lex::Lex() {
-	input = new Input();
+    input = new Input();
     generateTokens(input);
 }
 
 Lex::Lex(const char* filename) {
-    input = new Input(filename);
-    generateTokens(input);
+    parse(filename);
 }
 
 Lex::Lex(istream& istream) {
@@ -43,6 +42,11 @@ Lex::~Lex(){
     }
     delete tokens;
     delete input;
+}
+
+void Lex::parse(const char* fileName){
+    input = new Input(fileName);
+    generateTokens(input);
 }
 
 bool Lex::operator==(const Lex& lex) {
@@ -104,18 +108,18 @@ State Lex::nextState() {
     char character = input->getCurrentCharacter();
 	switch(state) {
         case Start:
-			result = getNextState(); 
-			break;
+                result = getNextState(); 
+		break;
 			
         case Comma:
-			emit(COMMA);
-			result = getNextState();
-			break;
+                emit(COMMA);
+		result = getNextState();
+		break;
 			
         case Period:
-			emit(PERIOD);
-			result = getNextState();
-			break;
+		emit(PERIOD);
+		result = getNextState();
+		break;
 			
         case SawColon:
             character = input->getCurrentCharacter();
@@ -288,11 +292,11 @@ State Lex::nextState() {
                 break;
 			
         case EndOfFile:
-			emit(ENDOFFILE);
-			result = End;
-			break;
+		emit(ENDOFFILE);
+		result = End;
+		break;
 			
-		case End:
+	case End:
             throw "ERROR:: in End state:, the Input should be empty once you reach the End state."; 
             break;
 		default:
@@ -343,17 +347,4 @@ void Lex::storeToken(Token* token) {
     //This section should ignore whitespace and comments and change the token type to the appropriate value
     //if the value of the token is "Schemes", "Facts", "Rules", or "Queries".
     tokens->push_back(token);
-}
-
-
-
-int main(int argc, char* argv[]) {
-    Lex lex(argv[1]);
-	
-    //Lex lex("active");
-    cout << lex.toString();
-	
-    //saveStringToFile(argv[2], lex.toString());
-
-    return 0;
 }

@@ -95,6 +95,14 @@ class Lex {
          * Postcondition: this = lex
          */
         Lex(const Lex& lex);
+        
+        
+        /*
+         *
+         * Parses a file
+         * 
+         */
+        void parse(const char* fileName);
 
     //Destructor
         /**

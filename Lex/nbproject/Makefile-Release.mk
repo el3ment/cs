@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Input.o \
 	${OBJECTDIR}/Lex.o \
+	${OBJECTDIR}/Parse.o \
 	${OBJECTDIR}/State.o \
 	${OBJECTDIR}/Token.o \
 	${OBJECTDIR}/TokenType.o \
@@ -82,6 +83,11 @@ ${OBJECTDIR}/Lex.o: Lex.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/Lex.o Lex.cpp
+
+${OBJECTDIR}/Parse.o: Parse.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/Parse.o Parse.cpp
 
 ${OBJECTDIR}/State.o: State.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -143,6 +149,19 @@ ${OBJECTDIR}/Lex_nomain.o: ${OBJECTDIR}/Lex.o Lex.cpp
 	    $(COMPILE.cc) -O2 -I. -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/Lex_nomain.o Lex.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Lex.o ${OBJECTDIR}/Lex_nomain.o;\
+	fi
+
+${OBJECTDIR}/Parse_nomain.o: ${OBJECTDIR}/Parse.o Parse.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Parse.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -O2 -I. -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/Parse_nomain.o Parse.cpp;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Parse.o ${OBJECTDIR}/Parse_nomain.o;\
 	fi
 
 ${OBJECTDIR}/State_nomain.o: ${OBJECTDIR}/State.o State.cpp 
