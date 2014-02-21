@@ -10,6 +10,7 @@
 #include <fstream>
 #include <algorithm>
 #include "Lex.h"
+#include "Parse.h"
 
 using namespace std;
 
@@ -117,6 +118,24 @@ void wiki2() {
 	
 }
 
+void parse_1(){
+    try{
+      Parse parse("./parse_wiki1_in");
+      compareFiles(saveStringToTempFile(parse.toString()), "./parse_wiki1_out", "parse_1");
+    }catch (string e){
+            cout << "%TEST_FAILED% time=0 testname=parse_1 (newsimpletest) message=" << e << endl;
+    }
+}
+
+void parse_2(){
+	try{
+	  Parse parse("./parse_wiki2_in");
+	  compareFiles(saveStringToTempFile(parse.toString()), "./parse_wiki2_out", "parse_2");
+	}catch (string e){
+		cout << "%TEST_FAILED% time=0 testname=parse_2 (newsimpletest) message=" << e << endl;
+	}
+}
+
 int main(int argc, char** argv) {
 	std::cout << "%SUITE_STARTING% newsimpletest" << std::endl;
 	std::cout << "%SUITE_STARTED%" << std::endl;
@@ -148,7 +167,15 @@ int main(int argc, char** argv) {
 	std::cout << "%TEST_STARTED% wiki2 (newsimpletest)" << std::endl;
 	wiki2();
 	std::cout << "%TEST_FINISHED% time=0 wiki2 (newsimpletest)" << std::endl;
+
+        // Parser
+        std::cout << "%TEST_STARTED% parse_1 (newsimpletest)" << std::endl;
+	parse_1();
+	std::cout << "%TEST_FINISHED% time=0 parse_1 (newsimpletest)" << std::endl;
 		
+  	std::cout << "%TEST_STARTED% parse_2 (newsimpletest)" << std::endl;
+	parse_2();
+	std::cout << "%TEST_FINISHED% time=0 parse_2 (newsimpletest)" << std::endl;
 
 	std::cout << "%SUITE_FINISHED% time=0" << std::endl;
 
