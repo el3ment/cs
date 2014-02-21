@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="88">
+<configurationDescriptor version="90">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="Rules" projectFiles="true">
+        <itemPath>Datalog.h</itemPath>
+        <itemPath>Fact.h</itemPath>
+        <itemPath>Lists.h</itemPath>
+        <itemPath>Query.h</itemPath>
+        <itemPath>Rule.h</itemPath>
+        <itemPath>Scheme.h</itemPath>
+      </logicalFolder>
       <itemPath>Input.h</itemPath>
       <itemPath>Lex.h</itemPath>
       <itemPath>Parse.h</itemPath>
@@ -39,9 +47,14 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Datalog.cpp</itemPath>
+      <itemPath>Fact.cpp</itemPath>
       <itemPath>Input.cpp</itemPath>
       <itemPath>Lex.cpp</itemPath>
       <itemPath>Parse.cpp</itemPath>
+      <itemPath>Query.cpp</itemPath>
+      <itemPath>Rule.cpp</itemPath>
+      <itemPath>Scheme.cpp</itemPath>
       <itemPath>State.cpp</itemPath>
       <itemPath>Token.cpp</itemPath>
       <itemPath>TokenType.cpp</itemPath>
@@ -66,8 +79,9 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
@@ -84,6 +98,14 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
+      <item path="Datalog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Datalog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Fact.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fact.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Input.h" ex="false" tool="3" flavor2="0">
@@ -92,9 +114,23 @@
       </item>
       <item path="Lex.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Lists.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Parse.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Parse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Rule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Rule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Scheme.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Scheme.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="State.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -172,8 +208,9 @@
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
@@ -198,6 +235,14 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
+      <item path="Datalog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Datalog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Fact.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fact.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Input.h" ex="false" tool="3" flavor2="0">
@@ -206,9 +251,23 @@
       </item>
       <item path="Lex.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Lists.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Parse.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Parse.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Rule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Rule.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Scheme.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Scheme.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="State.cpp" ex="false" tool="1" flavor2="0">
       </item>

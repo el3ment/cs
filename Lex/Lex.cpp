@@ -180,7 +180,8 @@ State Lex::nextState() {
                     result = ProcessingBlockComment;
                     input->advance();
                 }else if(character == '\n'){
-                    emit(COMMENT);
+                    //emit(COMMENT);
+					input->mark();
                     result = getNextState();
                 }else{
                      result = ProcessingComment;
@@ -207,7 +208,8 @@ State Lex::nextState() {
                         input->advance(); // We could make another state called "sawClosingPipe"
                                                           // but it seemed unnecessary
 
-                        emit(COMMENT);
+                        //emit(COMMENT);
+						input->mark();
                         result = getNextState();
                 }else{
                         result = ProcessingBlockComment;
@@ -218,7 +220,8 @@ State Lex::nextState() {
         case ProcessingComment:
                 //character = input->getCurrentCharacter();
                 if(character == '\n' || character == -1){
-                        emit(COMMENT);
+                        //emit(COMMENT);
+						input->mark();
                         result = getNextState();
                 }else{
                         input->advance();
@@ -228,73 +231,72 @@ State Lex::nextState() {
                 break;
 
         case Keyword:
+			// Loop until we find the end of the keyword
+			while(isalnum(character)){
+					input->advance();
+					character = input->getCurrentCharacter();
+			}
 
-                // Loop until we find the end of the keyword
-                while(isalnum(character)){
-                        input->advance();
-                        character = input->getCurrentCharacter();
-                }
+			if(input->getTokensValue() == "Schemes")
+					emit(SCHEMES);
+			else if(input->getTokensValue() == "Queries")
+					emit(QUERIES);
+			else if(input->getTokensValue() == "Rules")
+					emit(RULES);
+			else if(input->getTokensValue() == "Facts")
+					emit(FACTS);
+			else
+					emit(ID); // Otherwise, it must be an ID
 
-                if(input->getTokensValue() == "Schemes")
-                        emit(SCHEMES);
-                else if(input->getTokensValue() == "Queries")
-                        emit(QUERIES);
-                else if(input->getTokensValue() == "Rules")
-                        emit(RULES);
-                else if(input->getTokensValue() == "Facts")
-                        emit(FACTS);
-                else
-                        emit(ID); // Otherwise, it must be an ID
+			result = getNextState();
 
-                result = getNextState();
-
-                break;
+			break;
 
         case Whitespace:
-                if(isspace(character)){
-                        input->advance();
-                        result = Whitespace;
-                }else{
-                        //emit(WHITESPACE);
-                        input->mark();
-                        result = getNextState();
-                }
-                break;
+			if(isspace(character)){
+					input->advance();
+					result = Whitespace;
+			}else{
+					//emit(WHITESPACE);
+					input->mark();
+					result = getNextState();
+			}
+			break;
 
         case Left_Paren:
-                emit(LEFT_PAREN);
-                result = getNextState();
-                break;
+			emit(LEFT_PAREN);
+			result = getNextState();
+			break;
 
         case Right_Paren:
-                emit(RIGHT_PAREN);
-                result = getNextState();
-                break;
+			emit(RIGHT_PAREN);
+			result = getNextState();
+			break;
 
         case Q_Mark:
-                emit(Q_MARK);
-                result = getNextState();
-                break;
+			emit(Q_MARK);
+			result = getNextState();
+			break;
 
         case Multiply:
-                emit(MULTIPLY);
-                result = getNextState();
-                break;
+			emit(MULTIPLY);
+			result = getNextState();
+			break;
 
         case Add:
-                emit(ADD);
-                result = getNextState();
-                break;
+			emit(ADD);
+			result = getNextState();
+			break;
 
         case Undefined:
-                emit(UNDEFINED);
-                result = getNextState();
-                break;
-			
+			emit(UNDEFINED);
+			result = getNextState();
+			break;
+
         case EndOfFile:
-		emit(ENDOFFILE);
-		result = End;
-		break;
+			emit(ENDOFFILE);
+			result = End;
+			break;
 			
 	case End:
             throw "ERROR:: in End state:, the Input should be empty once you reach the End state."; 
