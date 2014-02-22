@@ -5,6 +5,7 @@
 #include "Utils.h"
 #include <iostream>
 #include <ctype.h>
+#include "Errors.h"
 
 using namespace std;
 
@@ -42,6 +43,22 @@ Lex::~Lex(){
     }
     delete tokens;
     delete input;
+}
+
+// Look at the current token, test it against the argument
+bool Lex::peek(TokenType test){ 
+	return getCurrentToken()->getTokenType() == test;
+}
+
+// Test the current token, if successful advance, otherwise throw an error
+Token Lex::match(TokenType consume){ 
+	if(getCurrentToken()->getTokenType() == consume){
+		Token matchedToken = *getCurrentToken();
+		advance();
+		return matchedToken;
+	}
+	
+	throw UNEXPECTED_TOKEN;
 }
 
 void Lex::parse(const char* fileName){

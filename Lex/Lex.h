@@ -162,7 +162,12 @@ class Lex {
          * PostCondition: currentToken = currentToken' + 1
          */
         void advance(); 
+		
+		// Peek and test a token without advancing.
+		bool peek(TokenType test);
 
+		// Test the current token, if successful advance, otherwise throw an error
+		Token match(TokenType consume); 
 
     private:
         //Domain Implementation

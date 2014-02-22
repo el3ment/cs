@@ -1,7 +1,9 @@
 #ifndef Utils_h
 #define Utils_h
 
+#include <vector>
 #include <string>
+
 /**
  *Converts an integer to a string.  Though many believe this should be a built in function to c++ like "atoi(char*)",
  *it is not.  So, we created one.  It is not very efficient.
@@ -16,5 +18,5 @@
  * Postcondition: atoi(answer) = i AND answer = result;
  */
 std::string& itoa(std::string& answer, int i);
-
+std::string itoa(int i);
 #endif

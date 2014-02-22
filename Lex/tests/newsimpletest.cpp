@@ -121,7 +121,7 @@ void wiki2() {
 void parse_1(){
     try{
       Parse parse("./parse_wiki1_in");
-      compareFiles(saveStringToTempFile(parse.toString()), "./parse_wiki1_out", "parse_1");
+      compareFiles(saveStringToTempFile(parse.parse()), "./parse_wiki1_out", "parse_1");
     }catch (string e){
             cout << "%TEST_FAILED% time=0 testname=parse_1 (newsimpletest) message=" << e << endl;
     }
@@ -130,7 +130,7 @@ void parse_1(){
 void parse_2(){
 	try{
 	  Parse parse("./parse_wiki2_in");
-	  compareFiles(saveStringToTempFile(parse.toString()), "./parse_wiki2_out", "parse_2");
+	  compareFiles(saveStringToTempFile(parse.parse()), "./parse_wiki2_out", "parse_2");
 	}catch (string e){
 		cout << "%TEST_FAILED% time=0 testname=parse_2 (newsimpletest) message=" << e << endl;
 	}

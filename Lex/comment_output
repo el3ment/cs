@@ -1,8 +1,6 @@
 (PERIOD,".",1)
 (COMMA,",",2)
 (STRING,"'a string'",3)
-(COMMENT,"#A comment",4)
-(COMMENT,"#",5)
 (ID,"anId",6)
 (SCHEMES,"Schemes",7)
 (ID,"FactsRules",8)

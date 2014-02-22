@@ -10,6 +10,7 @@
 
 #include "Lex.h"
 #include "TokenType.h"
+#include "Datalog.h";
 #include <string>
 
 using namespace std;
@@ -22,32 +23,11 @@ public:
     virtual ~Parse();
     string toString() const;
 	Token* getCurrentToken();
-    
-    bool peek(TokenType test);
-    bool match(TokenType consume);
-    bool parseDatalog();
-    bool parseScheme();
-	bool parseIdList();
-    bool parseSchemeList();
-    bool parseFactList();
-	bool parseFact();
-    bool parseRuleList();
-    bool parseQuery();
-    bool parseQueryList();
-	bool parseStringList();
-	
-	bool parseRule();
-	bool parseHeadPredicate();
-	bool parsePredicate();
-	bool parsePredicateList();
-	
-	bool parseParameter();
-	bool parseParameterList();
-	
-	bool parseExpression();
-	bool parseOperator();
+	string parse();
+    Datalog* structure;
 private:
     Lex _lexicalStructure;
+	
 
 };
 
