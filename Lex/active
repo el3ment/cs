@@ -1,3 +1,4 @@
+#test
 Schemes:
   snap(S,N,A,P)HasSameAddress(X,Y)
 
@@ -6,9 +7,13 @@ Facts: #comment
   snap('33333','Snoopy','12 Apple','555-1234').
 
 Rules:
-  HasSameAddress(X,Y) :- snap(F),snap(D,Y,B,E).
+  HasSameAddress(X,Y) :- snap(F),snap(((A+(A+(A+(A+(A+B)))))+B),Y,B,E).
 
 #comment
 
 Queries:
   HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who)?
+  HasSameAddress('Snoopy',Who).

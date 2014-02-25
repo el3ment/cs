@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
    
 	
    
-	Parse parser("active");
+	Parse parser(argv[1]); 
 	cout << parser.parse();
     
 

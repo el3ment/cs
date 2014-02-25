@@ -26,6 +26,7 @@ public:
 	void parseQueryList(Lex &lex){
 		if(lex.peek(ID)){
 			list.push_back(new Query(lex));
+                        parseQueryList(lex);
 			return;
 		}else if(lex.peek(ENDOFFILE)){
 			return;

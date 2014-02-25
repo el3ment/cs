@@ -198,7 +198,7 @@ State Lex::nextState() {
                     input->advance();
                 }else if(character == '\n'){
                     //emit(COMMENT);
-					input->mark();
+                        input->mark();
                     result = getNextState();
                 }else{
                      result = ProcessingComment;

@@ -8,8 +8,8 @@
 #ifndef QUERY_H
 #define	QUERY_H
 
-#include "Errors.h";
-#include "Lex.h";
+#include "Errors.h"
+#include "Lex.h"
 #include "Predicate.h"
 
 class Query {
