@@ -4,7 +4,8 @@
 #include <string>
 #include "Lex.h"
 #include "TokenType.h"
-#include "Datalog.h";
+#include "Datalog.h"
+#include <string>
 
 using namespace std;
 

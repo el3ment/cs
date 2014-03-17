@@ -48,5 +48,13 @@ int main(int argc, char* argv[]) {
 		cout << response.toString();
 	}
 	
+<<<<<<< HEAD
+=======
+   
+	Parse parser(argv[1]); 
+	cout << parser.parse();
+    
+
+>>>>>>> 6b1706ac9db5a29bda73ddef3c82fc6432469efc
     return 0;
 }
