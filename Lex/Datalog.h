@@ -20,6 +20,9 @@
 #include "Domain.h"
 #include <iostream>
 #include "Utils.h"
+#include <map>
+
+using namespace std;
 
 class Datalog {
 public:
@@ -29,66 +32,25 @@ public:
 	RuleList ruleList;
 	Query firstQuery;
 	QueryList queryList;
+	vector<Table*> database;
 	
 	Domain domain;
 	
 	Datalog(){}
-	Datalog(Lex& lex){
-		if(lex.peek(SCHEMES)){
-			lex.match(SCHEMES);
-			lex.match(COLON);
-			firstScheme = Scheme(lex);
-			
-			schemeList = SchemeList(lex);
-            
-			lex.match(FACTS);
-			lex.match(COLON);
-			factList = FactList(lex, domain);
-            
-			lex.match(RULES);
-			lex.match(COLON);
-			ruleList = RuleList(lex);
-
-			lex.match(QUERIES);
-			lex.match(COLON);
-			
-			firstQuery = Query(lex);
-			queryList = QueryList(lex);
-		}else{
-			throw UNEXPECTED_TOKEN;
-		}
-	}
+	Datalog(Lex& lex);
 	
 	Datalog(const Datalog& orig){};
 	
 	virtual ~Datalog(){};
 	
-	string toString() const{
-		string output;
-		output += "Schemes(";
-			output += schemeList.list.empty() ? "1" : itoa(1 + schemeList.list.size());
-			output += "): \n";
-			output += firstScheme.toString();
-			output += schemeList.toString();
-		output += "Facts(";
-			output += itoa(factList.list.size());
-			output += "): \n";
-			output += factList.toString();
-		output += "Rules(";
-			output += itoa(ruleList.list.size());
-			output += "): \n";
-			output += ruleList.toString();
-		output += "Queries(";
-			output += queryList.list.empty() ? "1" : itoa(1 + queryList.list.size());
-			output += "): \n";
-			output += firstQuery.toString();
-			output += queryList.toString();
-		output += "Domain(";
-			output += itoa(domain.list.size());
-			output += "): \n";
-			output += domain.toString();
-		return output;
-	};
+	void parseSchemes();
+	
+	void parseFacts();
+	Table* getTable(Token id);
+	
+	vector<Query*> getQueries();
+	
+	string toString() const;
 
 private:
 

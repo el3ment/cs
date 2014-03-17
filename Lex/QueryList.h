@@ -21,11 +21,16 @@ public:
 		parseQueryList(lex);
 	}
 	QueryList(const QueryList& orig){};
-	virtual ~QueryList(){};
+	virtual ~QueryList(){
+		for(int i = 0; i < list.size(); i++){
+			//delete list[i];
+		}
+	};
 	
 	void parseQueryList(Lex &lex){
 		if(lex.peek(ID)){
 			list.push_back(new Query(lex));
+			parseQueryList(lex);
 			return;
 		}else if(lex.peek(ENDOFFILE)){
 			return;

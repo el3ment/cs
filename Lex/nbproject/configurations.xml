@@ -25,12 +25,15 @@
         <itemPath>SchemeList.h</itemPath>
       </logicalFolder>
       <itemPath>Errors.h</itemPath>
+      <itemPath>EvaluateableInterface.h</itemPath>
       <itemPath>Input.h</itemPath>
       <itemPath>Lex.h</itemPath>
       <itemPath>Parse.h</itemPath>
       <itemPath>State.h</itemPath>
+      <itemPath>Table.h</itemPath>
       <itemPath>Token.h</itemPath>
       <itemPath>TokenType.h</itemPath>
+      <itemPath>Tuple.h</itemPath>
       <itemPath>Utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -60,14 +63,18 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Datalog.cpp</itemPath>
       <itemPath>Expression.cpp</itemPath>
       <itemPath>Input.cpp</itemPath>
       <itemPath>Lex.cpp</itemPath>
       <itemPath>Parameter.cpp</itemPath>
       <itemPath>Parse.cpp</itemPath>
+      <itemPath>Query.cpp</itemPath>
       <itemPath>State.cpp</itemPath>
+      <itemPath>Table.cpp</itemPath>
       <itemPath>Token.cpp</itemPath>
       <itemPath>TokenType.cpp</itemPath>
+      <itemPath>Tuple.cpp</itemPath>
       <itemPath>Utils.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -108,11 +115,15 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
+      <item path="Datalog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Datalog.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Domain.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Errors.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EvaluateableInterface.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Expression.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -150,6 +161,8 @@
       </item>
       <item path="PredicateList.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Query.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="QueryList.h" ex="false" tool="3" flavor2="0">
@@ -166,6 +179,10 @@
       </item>
       <item path="State.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Table.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Table.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Token.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Token.h" ex="false" tool="3" flavor2="0">
@@ -173,6 +190,10 @@
       <item path="TokenType.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="TokenType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Tuple.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Tuple.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Utils.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -265,11 +286,15 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
+      <item path="Datalog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Datalog.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Domain.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Errors.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EvaluateableInterface.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Expression.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -307,6 +332,8 @@
       </item>
       <item path="PredicateList.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Query.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="QueryList.h" ex="false" tool="3" flavor2="0">
@@ -323,6 +350,10 @@
       </item>
       <item path="State.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Table.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Table.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Token.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Token.h" ex="false" tool="3" flavor2="0">
@@ -330,6 +361,10 @@
       <item path="TokenType.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="TokenType.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Tuple.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Tuple.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Utils.cpp" ex="false" tool="1" flavor2="0">
       </item>

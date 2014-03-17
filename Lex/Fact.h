@@ -10,6 +10,9 @@
 
 #include "Token.h"
 #include "Domain.h"
+#include <vector>
+
+using namespace std;
 
 class Fact {
 public:

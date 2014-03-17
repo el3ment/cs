@@ -15,7 +15,11 @@ public:
 		parseSchemeList(lex);
 	};
 	SchemeList(const SchemeList& orig){};
-	virtual ~SchemeList(){};
+	virtual ~SchemeList(){
+		for(int i = 0; i < list.size(); i++){
+			//delete list[i];
+		}
+	};
 	
 	void parseSchemeList(Lex &lex){
 		if(lex.peek(ID)){

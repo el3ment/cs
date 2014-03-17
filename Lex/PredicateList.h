@@ -24,7 +24,11 @@ public:
 		parsePredicateList(lex);
 	};
 	PredicateList(const PredicateList& orig){};
-	virtual ~PredicateList(){};
+	virtual ~PredicateList(){
+		for(int i = 0; i < list.size(); i++){
+			//delete list[i];
+		}
+	};
 	
 	void parsePredicateList(Lex &lex){
 		if(lex.peek(COMMA)){

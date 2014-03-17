@@ -9,9 +9,11 @@
 #define	PARAMETER_H
 
 #include "Token.h"
+#include "Table.h"
+#include "EvaluateableInterface.h"
 #include "Expression.h"
 
-class Parameter {
+class Parameter{
 public:
 	
 	Token token;
@@ -23,6 +25,9 @@ public:
 	Parameter(const Parameter& orig){};
 	virtual ~Parameter(){};
 	string toString() const;
+	
+	Table eval(Table table, int index) const;
+	
 private:
 
 };

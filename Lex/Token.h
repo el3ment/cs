@@ -117,6 +117,9 @@ class Token {
          * PostCondition: tokenType = newTokenType 
          */
         void setTokenType(const TokenType newTokenType);
+		
+		
+		void setTokenValue(std::string newValue);
         
     private:
         //Domain Implementation

@@ -23,7 +23,11 @@ public:
 		parseParameterList(lex);
 	};
 	ParameterList(const ParameterList& orig){};
-	virtual ~ParameterList(){};
+	virtual ~ParameterList(){
+		for(int i = 0; i < list.size(); i++){
+			//delete list[i];
+		}
+	};
 	
 	void parseParameterList(Lex &lex){
 		if(lex.peek(COMMA)){

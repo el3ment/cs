@@ -24,7 +24,11 @@ public:
 		parseFactList(lex, domain);
 	};
 	FactList(const FactList& orig){};
-	virtual ~FactList(){};
+	virtual ~FactList(){
+		for(int i = 0; i < list.size(); i++){
+			//delete list[i];
+		}
+	};
 	
 	void parseFactList(Lex &lex, Domain &domain){
 		if(lex.peek(ID)){

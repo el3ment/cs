@@ -8,9 +8,13 @@
 #ifndef QUERY_H
 #define	QUERY_H
 
-#include "Errors.h";
-#include "Lex.h";
+#include "Errors.h"
+#include "Lex.h"
 #include "Predicate.h"
+#include "Table.h"
+#include "Datalog.h"
+
+class Datalog;
 
 class Query {
 public:
@@ -18,19 +22,13 @@ public:
 	Predicate predicate;
 	
 	Query(){}
-	Query(Lex &lex){
-		predicate = Predicate(lex);
-		lex.match(Q_MARK);
-	};
+	Query(Lex &lex);
 	Query(const Query& orig){};
 	virtual ~Query(){};
-	string toString() const{
-		string output;
-		output = "  ";
-		output += predicate.toString();
-		output += "?\n";
-		return output;
-	}
+	string toString() const;
+	
+	Table evaluate(Datalog* data);
+	
 private:
 
 };

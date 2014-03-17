@@ -1,5 +1,9 @@
 
 #include "Parameter.h"
+#include "EvaluateableInterface.h"
+#include "Table.h"
+#include <iostream>
+#include "Utils.h"
 
 using namespace std;
 
@@ -20,6 +24,25 @@ Parameter::Parameter(Lex &lex){
 	}
 
 	throw UNEXPECTED_TOKEN;
+}
+Table Parameter::eval(Table table, int index) const{
+	if(token.getTokenType() == STRING){
+		table = table.select(index, token);
+	}else if(token.getTokenType() == ID){
+			
+			
+		if(table.isInSchema(token)){
+			table = table.select(index, token);
+			table = table.rename(index, token.getTokensValue() + itoa(index));
+		}else{
+			table = table.rename(index, token.getTokensValue());
+		}
+		
+	}else{
+		// unimplemented
+	}
+	
+	return table;
 }
 
 string Parameter::toString() const{

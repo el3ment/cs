@@ -39,6 +39,10 @@ string Token::getTokensValue() const {
     return value;
 }
 
+void Token::setTokenValue(string newValue){
+	value = newValue;
+}
+
 string Token::toString() const {
     string lineNumberString;
     itoa(lineNumberString, lineNumber);

@@ -1,57 +1,52 @@
-#include "Parse.h"
 #include "Lex.h"
+#include "Parse.h"
 #include "TokenType.h"
 #include "Errors.h"
 #include <string>
 #include <iostream>
+#include "Datalog.h"
 
 using namespace std;
 
 Parse::Parse() {
 }
 
-Parse::Parse(const Parse& orig) {
+Parse::Parse(const char* fileName){
+	lexicalStructure = new Lex(fileName);
 }
+
+Parse::Parse(const Parse& orig){}
 
 Parse::~Parse() {
+	delete lexicalStructure;
 }
 
-Parse::Parse(const char* fileName){
-    _lexicalStructure.parse(fileName);
-}
-
-
-string Parse::parse(){
+Datalog* Parse::parse(){
     
-	string output;
+	Datalog* data = new Datalog(*lexicalStructure);
 	
-	try{
-		Datalog* data = new Datalog(_lexicalStructure);
-		output += "Success!\n";
-		output += data->toString();
-	}catch(int e){
-		switch(e){
-			case UNEXPECTED_TOKEN:
-				output ="Failure!\n";
-				output += "  ";
-				output += _lexicalStructure.getCurrentToken()->toString();
-				break;
-			default:
-				cout << "Unknown error";
-				break;
-		}
-	}
-	
-	return output;
+	return data;
 }
 
 int main(int argc, char* argv[]) {
-   
+  
+	Parse parser = Parse("active");
+	Datalog* data = parser.parse();
 	
-   
-	Parse parser("active");
-	cout << parser.parse();
-    
-
+	vector<Query*> queries = data->getQueries();
+	for(int i = 0; i < queries.size(); i++){
+		Table response = queries.at(i)->evaluate(data);
+		string countString = "No";
+		
+		if(response.count() > 0){
+			countString = "Yes(";
+			countString += itoa(response.count());
+			countString += ")";
+		}
+		
+		cout << queries.at(i)->predicate.toString() << "? " << countString << endl;
+		cout << response.toString();
+	}
+	
     return 0;
 }
