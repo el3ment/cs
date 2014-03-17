@@ -82,8 +82,8 @@ ${TESTDIR}/TestFiles/f1: ${OBJECTFILES}
 
 ${OBJECTDIR}/Datalog.o: Datalog.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Datalog.o Datalog.cpp
+	${RM} $@.d
+	$(COMPILE.cc) -g -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/Datalog.o Datalog.cpp
 
 ${OBJECTDIR}/Expression.o: Expression.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -112,8 +112,8 @@ ${OBJECTDIR}/Parse.o: Parse.cpp
 
 ${OBJECTDIR}/Query.o: Query.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Query.o Query.cpp
+	${RM} $@.d
+	$(COMPILE.cc) -g -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/Query.o Query.cpp
 
 ${OBJECTDIR}/State.o: State.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -122,8 +122,8 @@ ${OBJECTDIR}/State.o: State.cpp
 
 ${OBJECTDIR}/Table.o: Table.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Table.o Table.cpp
+	${RM} $@.d
+	$(COMPILE.cc) -g -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/Table.o Table.cpp
 
 ${OBJECTDIR}/Token.o: Token.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -137,8 +137,8 @@ ${OBJECTDIR}/TokenType.o: TokenType.cpp
 
 ${OBJECTDIR}/Tuple.o: Tuple.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I. -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Tuple.o Tuple.cpp
+	${RM} $@.d
+	$(COMPILE.cc) -g -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/Tuple.o Tuple.cpp
 
 ${OBJECTDIR}/Utils.o: Utils.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -168,8 +168,8 @@ ${OBJECTDIR}/Datalog_nomain.o: ${OBJECTDIR}/Datalog.o Datalog.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Datalog_nomain.o Datalog.cpp;\
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/Datalog_nomain.o Datalog.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Datalog.o ${OBJECTDIR}/Datalog_nomain.o;\
 	fi
@@ -246,8 +246,8 @@ ${OBJECTDIR}/Query_nomain.o: ${OBJECTDIR}/Query.o Query.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Query_nomain.o Query.cpp;\
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/Query_nomain.o Query.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Query.o ${OBJECTDIR}/Query_nomain.o;\
 	fi
@@ -272,8 +272,8 @@ ${OBJECTDIR}/Table_nomain.o: ${OBJECTDIR}/Table.o Table.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Table_nomain.o Table.cpp;\
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/Table_nomain.o Table.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Table.o ${OBJECTDIR}/Table_nomain.o;\
 	fi
@@ -311,8 +311,8 @@ ${OBJECTDIR}/Tuple_nomain.o: ${OBJECTDIR}/Tuple.o Tuple.cpp
 	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
 	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
 	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Tuple_nomain.o Tuple.cpp;\
+	    ${RM} $@.d;\
+	    $(COMPILE.cc) -g -I. -Dmain=__nomain -MMD -MP -MF $@.d -o ${OBJECTDIR}/Tuple_nomain.o Tuple.cpp;\
 	else  \
 	    ${CP} ${OBJECTDIR}/Tuple.o ${OBJECTDIR}/Tuple_nomain.o;\
 	fi

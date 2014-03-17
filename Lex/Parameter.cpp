@@ -29,11 +29,9 @@ Table Parameter::eval(Table table, int index) const{
 	if(token.getTokenType() == STRING){
 		table = table.select(index, token);
 	}else if(token.getTokenType() == ID){
-			
-			
 		if(table.isInSchema(token)){
-			table = table.select(index, token);
-			table = table.rename(index, token.getTokensValue() + itoa(index));
+                        table = table.select(index, token);
+                        table = table.rename(index, token.getTokensValue() + itoa(index));
 		}else{
 			table = table.rename(index, token.getTokensValue());
 		}

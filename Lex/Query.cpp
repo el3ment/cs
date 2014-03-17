@@ -25,6 +25,12 @@ Table Query::evaluate(Datalog* data){
 	for(int i = 0; i < predicate.size(); i++){
 		
 		if(predicate.at(i)->token.getTokenType() == ID){
+                    bool needToAdd = true;
+                    for(int j = 0; j < projection.size(); j++){
+                        if(projection[j] == predicate.at(i)->token.getTokensValue())
+                            needToAdd = false;
+                    }
+                    if(needToAdd)
 			projection.push_back(predicate.at(i)->token.getTokensValue());
 		}
 		

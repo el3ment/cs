@@ -11,8 +11,12 @@
 #include <iostream>
 #include <sstream>
 #include <tr1/unordered_set>
+#include <algorithm>
+#include <map>
+#include <tr1/unordered_set>
 
 using namespace std;
+using std::tr1::unordered_set;
 
 Table::Table() {
 }
@@ -52,10 +56,7 @@ string Table::getHeaderFromIndex(int index) const{
 }
 
 Table Table::project(vector<string> subset) const{
-	
-	// Remove the duplicates
-	subset.erase(unique(subset.begin(), subset.end()), subset.end());
-	
+
 	// Project
 	Table newTable = Table(_name, subset);
 	set<Tuple>::iterator tupleIterator;
@@ -97,7 +98,7 @@ Table Table::select(int index, Token right){
 			string leftValueOnRow = tuple.get(index);
 			
 			if(rightValueOnRow == leftValueOnRow){
-				newTable.add(tuple);
+                            newTable.add(tuple);
 			}
 			
 		// Test against a string
