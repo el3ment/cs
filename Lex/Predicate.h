@@ -11,6 +11,8 @@
 #include "Parameter.h"
 #include "ParameterList.h"
 
+class Datalog;
+
 class Predicate {
 public:
 	
@@ -18,38 +20,18 @@ public:
 	Parameter* firstParameter;
 	ParameterList parameterList;
 	
-	Predicate(){}
-	Predicate(Lex &lex){
-		id = lex.match(ID);
-		lex.match(LEFT_PAREN);
-		firstParameter = new Parameter(lex);
-		parameterList = ParameterList(lex);
-		lex.match(RIGHT_PAREN);
-	};
-	Predicate(const Predicate& orig){}
+	Predicate();
+	Predicate(Lex &lex);
+	Predicate(const Predicate& orig);
 	virtual ~Predicate(){};
 	
-	Parameter* at(int index){
-		if(index == 0){
-			return firstParameter;
-		}else{
-			return parameterList.list.at(index - 1);
-		}
-	}
+	Parameter* at(int index);
 	
-	int size(){
-		return (parameterList.list.size() > 0 ? 1 + parameterList.list.size() : 1);
-	}
+	int size();
 	
-	string toString() const{
-		string output;
-		output += id.getTokensValue();
-		output += "(";
-		output += firstParameter->toString();
-		output += parameterList.toString();
-		output += ")";
-		return output;
-	}
+	Table eval(Datalog* db);
+	
+	string toString() const;
 private:
 
 };

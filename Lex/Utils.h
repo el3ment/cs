@@ -19,4 +19,6 @@
  */
 std::string& itoa(std::string& answer, int i);
 std::string itoa(int i);
+bool existsStringInStringVector(std::vector<std::string> source, std::string find);
+
 #endif

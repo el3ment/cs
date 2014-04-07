@@ -13,6 +13,9 @@
 #include "HeadPredicate.h"
 #include "PredicateList.h"
 #include "Lex.h"
+#include <vector>
+
+class Datalog;
 
 class Rule {
 public:
@@ -21,27 +24,15 @@ public:
 	Predicate firstPredicate;
 	PredicateList predicateList;
 	
-	Rule(){}
-	Rule(Lex &lex){
-		headPredicate = HeadPredicate(lex);
-		lex.match(COLON_DASH);
-		firstPredicate = Predicate(lex);
-		predicateList = PredicateList(lex);
-		lex.match(PERIOD);
-	};
+	Rule();
+	Rule(Lex &lex);
 	
-	Rule(const Rule& orig){};
+	Table eval(Datalog* datalog);
+	Table eval(Table left, std::vector<Table> list);
+	
+	Rule(const Rule& orig);
 	virtual ~Rule(){};
-	string toString() const{
-		string output;
-		output = "  ";
-		output += headPredicate.toString();
-		output += " :- ";
-		output += firstPredicate.toString();
-		output += predicateList.toString();
-		output += ".\n";
-		return output;
-	}
+	string toString() const;
 
 private:
 

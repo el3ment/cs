@@ -27,3 +27,11 @@ string saveStringToFile(string filename, string content){
 	tempFile.close();
 	return filename;
 }
+
+bool existsStringInStringVector(vector<string> source, string find){
+	for(int i = 0; i < source.size(); i++){
+		if(source[i] == find)
+			return true;
+	}
+	return false;
+}

@@ -41,6 +41,7 @@ public:
 		}
 
 	}
+	
 	string toString() const{
 		string output;
 		for(int i = 0; i < list.size(); i++){

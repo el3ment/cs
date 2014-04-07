@@ -24,6 +24,7 @@ Datalog::Datalog(Lex& lex){
 
 		parseSchemes();
 		parseFacts();
+		parseRules();
 
 	}else{
 		throw UNEXPECTED_TOKEN;
@@ -50,10 +51,40 @@ void Datalog::parseFacts(){
 	}
 }
 
+void Datalog::parseRules(){
+	ruleList.eval(this);
+}
+
+void Datalog::addTableToFacts(Table newFacts){
+	// add table of new facts to datalog
+	Table* addToTable = getTable(newFacts._name);
+	
+	set<Tuple>::iterator tupleIterator;
+	for (tupleIterator = newFacts._rows.begin(); tupleIterator != newFacts._rows.end(); tupleIterator++){
+		addToTable->add(*tupleIterator);
+	}
+}
+
+int Datalog::countFacts(){
+	// return number of facts
+	int count = 0;
+	for(int i = 0; i < database.size(); i++){
+		count += database.at(i)->count();
+	}
+	return count;
+}
+
 Table* Datalog::getTable(Token id){
 	for(int i = 0; i < database.size(); i++){
 		if(database.at(i)->_name == id.getTokensValue()){
-			
+			return database.at(i);
+		}
+	}
+}
+
+Table* Datalog::getTable(string name){
+	for(int i = 0; i < database.size(); i++){
+		if(database.at(i)->_name == name){
 			return database.at(i);
 		}
 	}

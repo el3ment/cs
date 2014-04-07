@@ -13,37 +13,23 @@
 
 using namespace std;
 
+class Datalog;
+
 class RuleList {
 public:
 	
 	vector<Rule*> list;
 	
 	RuleList(){}
-	RuleList(Lex &lex){
-		parseRuleList(lex);
-	};
+	RuleList(Lex &lex);
 	
-	RuleList(const RuleList& orig){};
+	RuleList(const RuleList& orig);
 	virtual ~RuleList(){};
 	
-	void parseRuleList(Lex &lex){ 
-		if(lex.peek(ID)){
-			list.push_back(new Rule(lex));
-			parseRuleList(lex);
-			return;
-		}else if(lex.peek(QUERIES)){
-			return;
-		}
-
-		throw UNEXPECTED_TOKEN;
+	void parseRuleList(Lex &lex);
+	string toString() const;
 	
-	};
-	string toString() const{
-		string output;
-		for(int i = 0; i < list.size(); i++)
-			output += list[i]->toString();
-		return output;
-	}
+	void eval(Datalog* db);
 private:
 
 };

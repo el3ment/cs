@@ -27,6 +27,12 @@ Tuple::Tuple(vector<Token> argumentList){
 	this->_values = vector<Token>(argumentList);
 }
 
+void Tuple::addAll(Tuple tuple){
+	for(int i = 0; i < tuple._values.size(); i++){
+		_values.push_back(tuple._values[i]);
+	}
+}
+
 void Tuple::remove(int index){
 	//cout << "tuple size before " << _values.size() << endl;
 	//_values[index] = Token();

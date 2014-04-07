@@ -9,7 +9,7 @@
 #define	IDLIST_H
 
 #include <vector>
-
+#include "Lex.h"
 #include "Token.h"
 
 using namespace std;
@@ -54,6 +54,18 @@ public:
 			output += list[i].getTokensValue();
 		}
 		return output;
+	}
+	
+	int size(){
+		return 1 + list.size();
+	}
+	
+	Token at(int i){
+		if(i == 0){
+			return firstId;
+		}else{
+			return list[i - 1];
+		}
 	}
 private:
 

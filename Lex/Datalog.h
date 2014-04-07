@@ -44,9 +44,14 @@ public:
 	virtual ~Datalog(){};
 	
 	void parseSchemes();
-	
+	void parseRules();
 	void parseFacts();
+	
 	Table* getTable(Token id);
+	Table* getTable(string name);
+	
+	int countFacts();
+	void addTableToFacts(Table newTable);
 	
 	vector<Query*> getQueries();
 	

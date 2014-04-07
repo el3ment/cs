@@ -7,6 +7,7 @@
 
 #include "Table.h"
 #include "Token.h"
+#include "Utils.h"
 #include <vector>
 #include <iostream>
 #include <sstream>
@@ -15,11 +16,13 @@
 using namespace std;
 
 Table::Table() {
+	_rows = set<Tuple>();
 }
 
 Table::Table(Token id, Token first, vector<Token> list){
 	_name = id.getTokensValue();
 	_schema.push_back(first.getTokensValue());
+	_rows = set<Tuple>();
 	for(int i = 0; i < list.size(); i++){
 		_schema.push_back(list.at(i).getTokensValue());
 	}
@@ -27,6 +30,7 @@ Table::Table(Token id, Token first, vector<Token> list){
 
 Table::Table(string name, vector<string> schema){
 	_schema = schema;
+	_rows = set<Tuple>();
 	name = name;
 }
 
@@ -40,7 +44,6 @@ Table::Table(const Table* orig) {
 	for(int i = 0; i < orig->_schema.size(); i++){
 		_schema.push_back(orig->_schema.at(i));
 	}
-	
 	this->_name = orig->_name;
 }
 
@@ -138,6 +141,58 @@ string Table::toString() const{
 	
 	return ss.str();
 }
+
+Table Table::join(Table a, Table b){
+	Table newTable = new Table();
+	newTable._schema = a._schema;
+	
+	// Create the new intermediate join schema
+	for(int i = 0; i < b._schema.size(); i++){
+		if(existsStringInStringVector(a._schema, b._schema[i])){
+			newTable._schema.push_back("b" + itoa(i) + b._schema[i]);
+		}else{
+			newTable._schema.push_back(b._schema[i]);
+		}
+	}
+	
+//	set<Tuple>::iterator
+//	// Populate the new table
+//	foreach(a.tuples as aTuple){
+//		foreach(b.tuples as bTuple){
+//			Tuple newTuple = new Tuple();
+//			newTuple.addAll(aTuple);
+//			newTuple.addAll(bTuple);
+//			newTable.add(newTuple);
+//		}
+//	}
+	
+	set<Tuple>::iterator aTupleIterator;
+	for (aTupleIterator = a._rows.begin(); aTupleIterator != a._rows.end(); aTupleIterator++){
+		set<Tuple>::iterator bTupleIterator;
+		for (bTupleIterator = b._rows.begin(); bTupleIterator != b._rows.end(); bTupleIterator++){
+			Tuple newTuple = Tuple();
+			newTuple.addAll(*aTupleIterator);
+			newTuple.addAll(*bTupleIterator);
+			newTable.add(newTuple);
+		}	
+	}
+	
+	return newTable;
+
+//	for(int i = 0; i < b._schema.size(); i++){
+//		if(existsStringInStringVector(a._schema, b._schema[i])){
+//			newTable = newTable.select(b._schema[i], "b" + itoa(i) + b._schema[i]);
+//		}
+//	}
+
+//	Create a unique union of A and B Schema, and project to it.
+//	Set projection = new Set();
+//	projection.addAll(aSchema);
+//	projection.addAll(bSchema);
+//	return newTable.project(projection);
+	
+}
+
 
 void Table::add(Tuple tuple){
 	_rows.insert(tuple);

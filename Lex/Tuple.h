@@ -21,6 +21,7 @@ public:
 	virtual ~Tuple();
 	
 	void add(Token token);
+	void addAll(Tuple tuple);
 	string get(int id);
 	string toString() const;
 	void remove(int index);

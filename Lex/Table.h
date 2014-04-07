@@ -33,6 +33,7 @@ public:
 	Table select(int index, Token right);
 	Table rename(int fromIndex, string newValue) const;
 	Table project(vector<string> subset) const;
+	Table join(Table a, Table b);
 	
 	string toString() const;
 	
