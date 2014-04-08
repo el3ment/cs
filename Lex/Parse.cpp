@@ -30,9 +30,9 @@ Datalog* Parse::parse(){
 
 int main(int argc, char* argv[]) {
   
-	Parse parser = Parse("active");
+	Parse parser = Parse(argv[1]);
 	Datalog* data = parser.parse();
-	
+        
 	vector<Query*> queries = data->getQueries();
 	for(int i = 0; i < queries.size(); i++){
 		Table response = queries.at(i)->evaluate(data);
@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
 		
 		cout << queries.at(i)->predicate.toString() << "? " << countString << endl;
 		cout << response.toString();
-	
+
 	}
 
     return 0;
