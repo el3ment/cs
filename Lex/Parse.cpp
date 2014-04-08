@@ -30,7 +30,7 @@ Datalog* Parse::parse(){
 
 int main(int argc, char* argv[]) {
   
-	Parse parser = Parse(argv[1]);
+	Parse parser = Parse("active");
 	Datalog* data = parser.parse();
         
 	vector<Query*> queries = data->getQueries();

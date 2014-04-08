@@ -66,8 +66,8 @@ Table Table::project(vector<string> subset) const{
 	for(tupleIterator = _rows.begin(); tupleIterator != _rows.end(); tupleIterator++){
 		vector<Token> tupleList = vector<Token>();
 		
-		for(int i = 0; i < _schema.size(); i++){
-			for(int j = 0; j < subset.size(); j++){
+		for(int j = 0; j < subset.size(); j++){
+			for(int i = 0; i < _schema.size(); i++){
 				if(_schema[i] == subset[j]){
 					tupleList.push_back((*tupleIterator)._values[i]);
 				}
@@ -89,7 +89,6 @@ Table Table::rename(int fromIndex, string toValue) const{
 }
 
 Table Table::select(string a, string b){
-	cout << a << " --- " << b;
 	for(int i = 0; i < _schema.size(); i++){
 		if(_schema[i] == a){
 			return this->select(i, Token(ID, b, 1));
@@ -164,12 +163,6 @@ Table Table::join(Table a, Table b){
 		}
 	}
 	
-	cout << "Join schema " << newTable._schema.size() << " : ";
-	for(int i = 0; i < newTable._schema.size(); i++){
-		cout << newTable._schema[i] << ", ";
-	}
-	cout << endl << endl;
-	
 	set<Tuple>::iterator aTupleIterator;
 	for (aTupleIterator = a._rows.begin(); aTupleIterator != a._rows.end(); aTupleIterator++){
 		set<Tuple>::iterator bTupleIterator;
@@ -181,16 +174,12 @@ Table Table::join(Table a, Table b){
 		}	
 	}
 	
-	cout << "before select : " << newTable.toString(); 
-	
 	for(int i = 0; i < b._schema.size(); i++){
 		if(existsStringInStringVector(a._schema, b._schema[i])){
 			newTable = newTable.select(b._schema[i], "b" + itoa(i) + b._schema[i]);
 		}
 	}
 	
-	cout << "filtered join table : " << newTable.toString() << endl;
-
 	return newTable;
 }
 

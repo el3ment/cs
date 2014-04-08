@@ -28,9 +28,7 @@ int Predicate::size(){
 
 Table Predicate::eval(Datalog* db){
 	Table output = Table(db->getTable(id));
-	
-	cout << "predicate.eval : " << output.toString() << endl;
-	
+
 	vector<string> projection = vector<string>();
 	
 	for(int i = 0; i < size(); i++){
@@ -39,8 +37,6 @@ Table Predicate::eval(Datalog* db){
 		}
 		output = at(i)->eval(output, i);
 	}
-	
-	cout << "predicate after : " << output.toString() << endl;
 
 	return output;
 }

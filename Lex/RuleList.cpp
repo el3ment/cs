@@ -36,11 +36,15 @@ void RuleList::eval(Datalog* db){
 	// the rules don't add any additional facts
 	
 	int oldCount;
+	int n = 0;
 	do{
 		oldCount = db->countFacts();
+		n++;
 		for(int i = 0; i < list.size(); i++){
 			Table ruleTable = list.at(i)->eval(db);
 			db->addTableToFacts(ruleTable);
 		}
 	}while(oldCount != db->countFacts());
+	
+	cout << "Schemes populated after " << n << " passes through the Rules." << endl;
 }

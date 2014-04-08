@@ -1,17 +1,19 @@
 Schemes:
-    emp(id, name, age)
-    contacts(id, phone)
-	joinAll(id,name,phone)
+   A(a,b)
+   R(a,b)
 
 Facts:
-	emp('1', 'Robert', '22').
-	emp('2', 'James', '22').
-	emp('3', 'Ryan', '22').
-	contacts('1', '4607664616').
-	contacts('2', '1231231233').
+   R('1','2').
+   A('1','2').
+   A('2','3').
+   A('3','4').
+   A('4','5').
 
-Rules:
-    joinAll(id,name,phone):-emp(id, name, age),contacts(id, phone).
-
+Rules: 
+   R(A,B):-R(A,Z),A(Z,B).
+	
 Queries:
-	joinAll(id,name,phone)?
+   R(x,y)?
+R(x,y)?
+R(x,y)?
+R(x,y)?

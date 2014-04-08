@@ -28,11 +28,9 @@ Tuple::Tuple(vector<Token> argumentList){
 }
 
 void Tuple::addAll(Tuple tuple){
-	cout << "addAll input tuple " << tuple.toString() << endl;
 	for(int i = 0; i < tuple._values.size(); i++){
 		_values.push_back(tuple._values[i]);
 	}
-	cout << "addAll _values.size = " << _values.size() << endl;
 }
 
 void Tuple::remove(int index){

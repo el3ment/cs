@@ -33,23 +33,19 @@ Table Rule::eval(Datalog* db){
 			projection.push_back(headPredicate.idList.at(i).getTokensValue());
 		}
 	}
-	//return output.project(projection);
-	cout << "--" << endl;
-	cout << output.toString();
-	//cout << output.project(projection).toString();
-	cout << "--" << endl;
 	
 	return output.project(projection);
 }
 
 Table Rule::eval(Table left, vector<Table> list){
 	if(list.size() > 1){
-		Table left = list.at(list.size() - 1);
+		Table secondLeft = list.at(list.size() - 1);
 		list.pop_back();
-		return eval(left, list);
-	}else{
-		cout << "Joining " << left._name << "(" << left.toString() << ") " << " with " << list[0]._name << "(" << list[0].toString() << ") "<< endl;
+		return left.join(left, eval(secondLeft, list));
+	}else if(list.size() == 1){
 		return left.join(left, list[0]);
+	}else{
+		return left;
 	}
 }
 
