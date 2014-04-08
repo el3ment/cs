@@ -30,6 +30,7 @@ public:
 	int indexOfTokenInSchema(Token token);
 	bool isInSchema(Token token);
 	
+	Table select(string a, string b);
 	Table select(int index, Token right);
 	Table rename(int fromIndex, string newValue) const;
 	Table project(vector<string> subset) const;

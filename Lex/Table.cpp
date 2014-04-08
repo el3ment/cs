@@ -31,7 +31,7 @@ Table::Table(Token id, Token first, vector<Token> list){
 Table::Table(string name, vector<string> schema){
 	_schema = schema;
 	_rows = set<Tuple>();
-	name = name;
+	_name = name;
 }
 
 
@@ -75,7 +75,7 @@ Table Table::project(vector<string> subset) const{
 		
 		newTable.add(Tuple(tupleList));
 	}
-
+	
 	return newTable;
 }
 
@@ -85,6 +85,15 @@ Table Table::rename(int fromIndex, string toValue) const{
 	newTable._schema[fromIndex] = toValue;
 
 	return newTable;
+}
+
+Table Table::select(string a, string b){
+	cout << a << " --- " << b;
+	for(int i = 0; i < _schema.size(); i++){
+		if(_schema[i] == a){
+			return this->select(i, Token(ID, b, 1));
+		}
+	}
 }
 
 Table Table::select(int index, Token right){
@@ -143,8 +152,7 @@ string Table::toString() const{
 }
 
 Table Table::join(Table a, Table b){
-	Table newTable = new Table();
-	newTable._schema = a._schema;
+	Table newTable = Table(a._name + "_join_" + b._name, a._schema);
 	
 	// Create the new intermediate join schema
 	for(int i = 0; i < b._schema.size(); i++){
@@ -155,16 +163,11 @@ Table Table::join(Table a, Table b){
 		}
 	}
 	
-//	set<Tuple>::iterator
-//	// Populate the new table
-//	foreach(a.tuples as aTuple){
-//		foreach(b.tuples as bTuple){
-//			Tuple newTuple = new Tuple();
-//			newTuple.addAll(aTuple);
-//			newTuple.addAll(bTuple);
-//			newTable.add(newTuple);
-//		}
-//	}
+	cout << "Join schema " << newTable._schema.size() << " : ";
+	for(int i = 0; i < newTable._schema.size(); i++){
+		cout << newTable._schema[i] << ", ";
+	}
+	cout << endl << endl;
 	
 	set<Tuple>::iterator aTupleIterator;
 	for (aTupleIterator = a._rows.begin(); aTupleIterator != a._rows.end(); aTupleIterator++){
@@ -177,20 +180,17 @@ Table Table::join(Table a, Table b){
 		}	
 	}
 	
-	return newTable;
-
-//	for(int i = 0; i < b._schema.size(); i++){
-//		if(existsStringInStringVector(a._schema, b._schema[i])){
-//			newTable = newTable.select(b._schema[i], "b" + itoa(i) + b._schema[i]);
-//		}
-//	}
-
-//	Create a unique union of A and B Schema, and project to it.
-//	Set projection = new Set();
-//	projection.addAll(aSchema);
-//	projection.addAll(bSchema);
-//	return newTable.project(projection);
+	cout << "before select : " << newTable.toString(); 
 	
+	for(int i = 0; i < b._schema.size(); i++){
+		if(existsStringInStringVector(a._schema, b._schema[i])){
+			newTable = newTable.select(b._schema[i], "b" + itoa(i) + b._schema[i]);
+		}
+	}
+	
+	cout << "filtered join table : " << newTable.toString() << endl;
+
+	return newTable;
 }
 
 

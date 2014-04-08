@@ -1,13 +1,17 @@
 Schemes:
-    snap(s,n,a,p)
-    NameHasID(n,s)
+    emp(id, name, age)
+    contacts(id, phone)
+	joinAll(id,name,phone)
 
 Facts:
-    snap('12345','Snoopy','12 Apple','555-1234').
-    snap('67890','Van Pelt','34 Pear','555-5678').
+	emp('1', 'Robert', '22').
+	emp('2', 'James', '22').
+	emp('3', 'Ryan', '22').
+	contacts('1', '4607664616').
+	contacts('2', '1231231233').
 
 Rules:
-    NameHasID(NAME,ID):-snap(ID,NAME,A,P).
+    joinAll(id,name,phone):-emp(id, name, age),contacts(id, phone).
 
 Queries:
-	NameHasID(NAME,ID)?
+	joinAll(id,name,phone)?

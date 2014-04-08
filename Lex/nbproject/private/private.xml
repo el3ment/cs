@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>1</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Parameter.h</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/tests/newsimpletest.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/active</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Tuple.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/State.h</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Parse.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Parse.h</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Token.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Query.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Datalog.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/blank</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Table.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Table.h</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/State.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/QueryList.h</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Parameter.cpp</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Datalog.h</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Token.h</file>
+            <file>file:/Users/robert/NetBeansProjects/Lex/Tuple.h</file>
+        </group>
+    </open-files>
+</project-private>
