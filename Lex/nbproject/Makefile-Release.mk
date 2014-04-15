@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=GNU-MacOSX
-CND_DLIB_EXT=dylib
+CND_PLATFORM=GNU-Linux-x86
+CND_DLIB_EXT=so
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -122,7 +122,6 @@ ${OBJECTDIR}/Query.o: Query.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/Query.o Query.cpp
-<<<<<<< HEAD
 
 ${OBJECTDIR}/Rule.o: Rule.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -133,8 +132,6 @@ ${OBJECTDIR}/RuleList.o: RuleList.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -I. -MMD -MP -MF $@.d -o ${OBJECTDIR}/RuleList.o RuleList.cpp
-=======
->>>>>>> 37aa1374f2f8f94891c37f8774972ad10868f922
 
 ${OBJECTDIR}/State.o: State.cpp 
 	${MKDIR} -p ${OBJECTDIR}
