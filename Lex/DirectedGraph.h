@@ -12,6 +12,8 @@
 #include <vector>
 #include <set>
 #include <map>
+
+#include <iostream>
 #include "ConnectedComponent.h"
 
 using namespace std;
@@ -41,10 +43,10 @@ public:
         mutable string destinationVertex;
         
         bool operator<(const Edge& rhs) const{
-          if(sourceVertex.compare(rhs.sourceVertex) < 0)
-              return true;
+          if(sourceVertex < rhs.sourceVertex || destinationVertex < rhs.destinationVertex)
+                return true;
           else
-              return false;
+                return false;
         }
 
         bool operator==(const Edge& rhs) const{
@@ -61,14 +63,18 @@ public:
     set<string> verticies;
     set<DirectedGraph::Edge> edges;
     vector<ConnectedComponent> sccs;
-    map<string, int> depths;
+    map<int, vector<string> > depths;
+    vector<string> tree;
+    set<string> unVisitedVerticies;
     
     void reverse();
     void addVertex(string id);
     void addEdge(string source, string destination);
     string toString();
     void generateSCCs();
-    void getNextUnvisitedChild(string vertex, set<string>& visitedVerticies, int depth);
+    void generateDepths();
+    void buildTree(string vertex, int depth);
+    void pruneTo(vector<string> rules);
 private:
 
 };

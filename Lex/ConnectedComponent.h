@@ -17,7 +17,7 @@ using namespace std;
 
 class ConnectedComponent {
 public:
-    ConnectedComponent();
+    ConnectedComponent(vector<string> newVerticies);
     ConnectedComponent(const ConnectedComponent& orig);
     virtual ~ConnectedComponent();
     

@@ -7,18 +7,31 @@
 
 #include "ConnectedComponent.h"
 #include "Datalog.h"
+#include <sstream>
 
-ConnectedComponent::ConnectedComponent() {
+using namespace std;
+
+ConnectedComponent::ConnectedComponent(vector<string> newVerticies) {
+    vertcies = vector<string>(newVerticies);
 }
 
 ConnectedComponent::ConnectedComponent(const ConnectedComponent& orig) {
+    vertcies = orig.vertcies;
 }
 
 ConnectedComponent::~ConnectedComponent() {
 }
 
 string ConnectedComponent::toString(){
-    return "yep";
+    stringstream ss;
+    
+    for(int i = 0; i < vertcies.size(); i++){
+        ss << vertcies[i] << ", ";
+    }
+    
+    ss << endl;
+    
+    return ss.str();
 }
 
 bool ConnectedComponent::exists(string test){

@@ -2,6 +2,7 @@
 #include "Rule.h"
 #include "Datalog.h"
 #include <vector>
+#include "Utils.h"
 #include "DirectedGraph.h"
 
 using namespace std;
@@ -35,19 +36,30 @@ void RuleList::eval(Datalog* db){
 
     directedGraph = DirectedGraph();
     
+    // Create list of used predicate ids
+    vector<string> usedRules = vector<string>();
+    usedRules.push_back(db->firstQuery.predicate.id.getTokensValue());
+    for(int i = 0; i < db->queryList.list.size(); i++){
+        usedRules.push_back(db->queryList.list[i]->predicate.id.getTokensValue());
+    }
+    
+    // Generate the graph
     for(int i = 0; i < list.size(); i++){
         for(int j = 0; j < list[i]->size(); j++){
-            directedGraph.addEdge(list[i]->headPredicate.id.getTokensValue(), list[i]->getId(j));
+            // Prune to only rules that are referenced by queries
+            if(existsStringInStringVector(usedRules, list[i]->headPredicate.id.getTokensValue())){
+                //if(list[i]->headPredicate.id.getTokensValue() != list[i]->getId(j))
+                    directedGraph.addEdge(list[i]->headPredicate.id.getTokensValue(), list[i]->getId(j));
+            }
         }
     }
     
+    // Generate the SCCs
     directedGraph.generateSCCs();
     
-    // prune only to vital sccs
-    
+    // Evaluate the SCCs
     for(int i = 0; i < directedGraph.sccs.size(); i++){
         directedGraph.sccs[i].eval(db);
     }
     
-    cout << "The graph!" << endl<< directedGraph.toString();
 }

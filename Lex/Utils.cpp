@@ -3,6 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
+#include <map>
 #include <vector>
 
 using namespace std;
@@ -34,4 +35,13 @@ bool existsStringInStringVector(vector<string> source, string find){
 			return true;
 	}
 	return false;
+}
+
+bool existsInSetStrings(set<string> testingSet, string key){
+    set<string>::iterator it;
+    for(it = testingSet.begin(); it != testingSet.end(); it++){
+        if(*it == key)
+            return true;
+    }
+    return false;
 }

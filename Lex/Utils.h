@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <set>
 
 /**
  *Converts an integer to a string.  Though many believe this should be a built in function to c++ like "atoi(char*)",
@@ -20,5 +21,5 @@
 std::string& itoa(std::string& answer, int i);
 std::string itoa(int i);
 bool existsStringInStringVector(std::vector<std::string> source, std::string find);
-
+bool existsInSetStrings(std::set<std::string> set, std::string find);
 #endif
