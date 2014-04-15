@@ -2,6 +2,7 @@
 #include "Rule.h"
 #include "Datalog.h"
 #include <vector>
+#include "DirectedGraph.h"
 
 using namespace std;
 
@@ -31,20 +32,22 @@ string RuleList::toString() const{
 }
 
 void RuleList::eval(Datalog* db){
-	
-	// Loop through rules for as long as
-	// the rules don't add any additional facts
-	
-	int oldCount;
-	int n = 0;
-	do{
-		oldCount = db->countFacts();
-		n++;
-		for(int i = 0; i < list.size(); i++){
-			Table ruleTable = list.at(i)->eval(db);
-			db->addTableToFacts(ruleTable);
-		}
-	}while(oldCount != db->countFacts());
-	
-	cout << "Schemes populated after " << n << " passes through the Rules." << endl;
+
+    directedGraph = DirectedGraph();
+    
+    for(int i = 0; i < list.size(); i++){
+        for(int j = 0; j < list[i]->size(); j++){
+            directedGraph.addEdge(list[i]->headPredicate.id.getTokensValue(), list[i]->getId(j));
+        }
+    }
+    
+    directedGraph.generateSCCs();
+    
+    // prune only to vital sccs
+    
+    for(int i = 0; i < directedGraph.sccs.size(); i++){
+        directedGraph.sccs[i].eval(db);
+    }
+    
+    cout << "The graph!" << endl<< directedGraph.toString();
 }

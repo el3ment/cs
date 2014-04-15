@@ -10,6 +10,7 @@
 
 #include "Rule.h"
 #include <vector>
+#include "DirectedGraph.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ class RuleList {
 public:
 	
 	vector<Rule*> list;
+        DirectedGraph directedGraph;
 	
 	RuleList(){}
 	RuleList(Lex &lex);

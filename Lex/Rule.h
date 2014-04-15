@@ -33,6 +33,8 @@ public:
 	Rule(const Rule& orig);
 	virtual ~Rule(){};
 	string toString() const;
+        int size();
+        string getId(int i);
 
 private:
 

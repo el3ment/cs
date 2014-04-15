@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="90">
+<configurationDescriptor version="84">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -24,6 +24,8 @@
         <itemPath>Scheme.h</itemPath>
         <itemPath>SchemeList.h</itemPath>
       </logicalFolder>
+      <itemPath>ConnectedComponent.h</itemPath>
+      <itemPath>DirectedGraph.h</itemPath>
       <itemPath>Errors.h</itemPath>
       <itemPath>EvaluateableInterface.h</itemPath>
       <itemPath>Input.h</itemPath>
@@ -35,6 +37,7 @@
       <itemPath>TokenType.h</itemPath>
       <itemPath>Tuple.h</itemPath>
       <itemPath>Utils.h</itemPath>
+      <itemPath>Vertex.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -63,7 +66,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>ConnectedComponent.cpp</itemPath>
       <itemPath>Datalog.cpp</itemPath>
+      <itemPath>DirectedGraph.cpp</itemPath>
       <itemPath>Expression.cpp</itemPath>
       <itemPath>Input.cpp</itemPath>
       <itemPath>Lex.cpp</itemPath>
@@ -79,6 +84,7 @@
       <itemPath>TokenType.cpp</itemPath>
       <itemPath>Tuple.cpp</itemPath>
       <itemPath>Utils.cpp</itemPath>
+      <itemPath>Vertex.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -112,9 +118,8 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
-        <dependencyChecking>true</dependencyChecking>
-        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
@@ -131,106 +136,6 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
-      <item path="Datalog.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Datalog.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Domain.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Errors.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="EvaluateableInterface.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Expression.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Expression.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Fact.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FactList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="HeadPredicate.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="IdList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Input.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Input.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Lex.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Lex.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Operator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Parameter.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Parameter.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ParameterList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Parse.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Parse.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Predicate.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Predicate.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="PredicateList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Query.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="QueryList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Rule.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Rule.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="RuleList.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="RuleList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Scheme.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="SchemeList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="State.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="State.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Table.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Table.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Token.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Token.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="TokenType.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="TokenType.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Tuple.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Tuple.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Utils.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Utils.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="active" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="blank" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="blank_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="comment" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="comment_output" ex="false" tool="3" flavor2="0">
-      </item>
       <folder path="TestFiles/f2">
         <cTool>
           <incDir>
@@ -246,44 +151,11 @@
           <output>${TESTDIR}/TestFiles/f2</output>
         </linkerTool>
       </folder>
-      <item path="invalid_comment" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki1_in" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki1_out" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki2_in" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki2_out" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="quotes_multiline" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="quotes_multiline_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_line" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_line_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_token" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_token_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="tests/newsimpletest.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="wiki1" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="wiki1_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="wiki2" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="wiki2_output" ex="false" tool="3" flavor2="0">
-      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
-        <dependencyChecking>true</dependencyChecking>
-        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
@@ -308,106 +180,6 @@
           <output>${TESTDIR}/TestFiles/f1</output>
         </linkerTool>
       </compileType>
-      <item path="Datalog.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Datalog.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Domain.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Errors.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="EvaluateableInterface.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Expression.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Expression.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Fact.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="FactList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="HeadPredicate.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="IdList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Input.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Input.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Lex.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Lex.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Operator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Parameter.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Parameter.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ParameterList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Parse.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Parse.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Predicate.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Predicate.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="PredicateList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Query.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="QueryList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Rule.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Rule.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="RuleList.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="RuleList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Scheme.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="SchemeList.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="State.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="State.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Table.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Table.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Token.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Token.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="TokenType.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="TokenType.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Tuple.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Tuple.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Utils.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Utils.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="active" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="blank" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="blank_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="comment" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="comment_output" ex="false" tool="3" flavor2="0">
-      </item>
       <folder path="TestFiles/f2">
         <cTool>
           <incDir>
@@ -423,38 +195,6 @@
           <output>${TESTDIR}/TestFiles/f2</output>
         </linkerTool>
       </folder>
-      <item path="invalid_comment" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki1_in" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki1_out" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki2_in" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="parse_wiki2_out" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="quotes_multiline" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="quotes_multiline_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_line" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_line_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_token" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="single_token_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="tests/newsimpletest.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="wiki1" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="wiki1_output" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="wiki2" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="wiki2_output" ex="false" tool="3" flavor2="0">
-      </item>
     </conf>
   </confs>
 </configurationDescriptor>

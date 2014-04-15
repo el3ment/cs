@@ -16,6 +16,17 @@ Rule::Rule(Lex &lex){
 	lex.match(PERIOD);
 };
 
+string Rule::getId(int i){    
+    if(i == 0)
+        return firstPredicate.id.getTokensValue();
+    else
+        return predicateList.list[i - 1]->id.getTokensValue();
+}
+
+int Rule::size(){
+    return 1 + predicateList.list.size();
+}
+
 Table Rule::eval(Datalog* db){
 	
 	vector<Table> list = vector<Table>();

@@ -15,6 +15,9 @@ S('4','3','1').
 
 Rules: 
    R(X,X):-A(X,'1').
+   R(X,X):-A(X,'2').
+   S(X,Y,Z):-S(X,Y,Z).
+   A(X,Y):-A(X,X).
 	
 Queries:
    R(x,y)?
